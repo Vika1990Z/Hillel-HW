@@ -19,10 +19,11 @@ header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 30px;
+    justify-items: center;
 }
 
 main {
-    max-width: 1200px;
+
     margin: 60px auto;
     padding: 20px;
 }
@@ -31,7 +32,6 @@ div.card {
     grid-column: span 6;
     background: rgb(222, 221, 221);
     max-width: 500px;
-    min-width: 250px;
     padding: 10px 20px;
     border-radius: 6px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
@@ -57,12 +57,18 @@ div.card p {
 
 @media screen and (max-width: 700px) {
     main .card {
-      grid-column: 2/span 10;
-      justify-self: center;
-    }
-    main {
-      justify-items: center;
+      grid-column: span 10;
     }
   }
   
+  
+  @media screen and (max-width: 350) {
+    main .card {
+      grid-column: span 12;
+      justify-self: start;
+      margin: 0;
+      font-size: 0.8rem;
+    }
+
+  }
   
