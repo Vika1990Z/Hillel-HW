@@ -62,13 +62,10 @@ div.card p {
   }
   
   
-  @media screen and (max-width: 350) {
-    main .card {
-      grid-column: span 12;
-      justify-self: start;
-      margin: 0;
-      font-size: 0.8rem;
-    }
+@media screen and (max-width: 350) {
+main .card {
+    grid-column: span 12;
+    font-size: 0.8rem;
+}
 
-  }
-  
+}
