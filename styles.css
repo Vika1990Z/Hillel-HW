@@ -16,6 +16,7 @@ header {
 }
 
 .grid {
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 30px;
@@ -29,12 +30,13 @@ main {
 }
 
 div.card {
+    width: 500px;
     grid-column: span 6;
     background: rgb(222, 221, 221);
-    max-width: 500px;
     padding: 10px 20px;
     border-radius: 6px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
+    
 }
 
 h3.card  {
@@ -55,17 +57,31 @@ div.card p {
     font-weight: 450;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1150px) {
     main .card {
-      grid-column: span 10;
+        width: inherit;
     }
+}  
+
+@media screen and (max-width: 550px) {
+    div.card {
+        width: inherit;
+        grid-column: 2/12;
+    }   
   }
   
-  
-@media screen and (max-width: 350) {
-main .card {
-    grid-column: span 12;
-    font-size: 0.8rem;
-}
 
-}
+  @media screen and (max-width: 360px) {
+    div.card {
+        width: inherit;
+        grid-column: 1/13;
+    } 
+    
+    .grid {
+        gap: 30px 0px;
+    }
+
+    header {
+        font-size: 12px;
+    }
+  }
