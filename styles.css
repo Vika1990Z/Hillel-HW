@@ -30,6 +30,8 @@ main {
 div.card {
     grid-column: span 6;
     background: rgb(222, 221, 221);
+    max-width: 500px;
+    min-width: 250px;
     padding: 10px 20px;
     border-radius: 6px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
@@ -55,7 +57,8 @@ div.card p {
 
 @media screen and (max-width: 700px) {
     main .card {
-      grid-column: 3 / span 8;
+      grid-column: 2/span 10;
+      justify-self: center;
     }
     main {
       justify-items: center;
