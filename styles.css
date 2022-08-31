@@ -16,7 +16,6 @@ header {
     text-align: center;
     color: white;
     text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
-    border-radius: 30px;
 }
 
 main {
@@ -36,7 +35,7 @@ div.card {
     text-align: center;
     background: rgb(222, 221, 221);
     padding: 50px;
-    min-width: 305px;
+    min-width: 315px;
     border-radius: 6px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
     border-radius: 30px;
@@ -61,7 +60,7 @@ button:hover {
 }
 
 input {
-    width: 50px;
+    width: 60px;
     background: none;
     border: none;
     font-size: xx-large;
