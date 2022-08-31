@@ -84,7 +84,7 @@ input {
 
   
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1150px) {
     div.card {
         width: inherit;
         grid-column: 1/13;
