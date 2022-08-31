@@ -98,3 +98,24 @@ input {
         font-size: 12px;
     }
 }
+
+
+@media screen and (max-width: 380px) {
+    div.card {
+        grid-column: 1/13;
+        min-width: 315px;
+    } 
+
+    .grid {
+        gap: 30px 0px;
+    }
+
+    header {
+        font-size: 12px;
+    }
+
+    input {
+        width: 60px;
+        font-size: larger;
+    }
+}
