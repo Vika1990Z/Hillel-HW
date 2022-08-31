@@ -60,7 +60,7 @@ button:hover {
 }
 
 input {
-    width: 60px;
+    width: fit-content;
     background: none;
     border: none;
     font-size: xx-large;
