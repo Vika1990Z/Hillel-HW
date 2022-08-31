@@ -97,6 +97,10 @@ input {
     header {
         font-size: 12px;
     }
+    input {
+        width: 70px;
+        font-size: x-large;
+    }
 }
 
 
