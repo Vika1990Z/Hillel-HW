@@ -35,7 +35,7 @@ div.card {
     text-align: center;
     background: rgb(222, 221, 221);
     padding: 50px;
-    min-width: 315px;
+    min-width: 355px;
     border-radius: 6px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
     border-radius: 30px;
@@ -60,7 +60,7 @@ button:hover {
 }
 
 input {
-    width: fit-content;
+    width: 100px;
     background: none;
     border: none;
     font-size: xx-large;
