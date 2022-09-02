@@ -231,11 +231,6 @@ const users = [
     }
   ]
 
-// const element = document.createElement('main');
-// element.classList.add('grid');
-// element.innerHTML = '<h1>Our active users</h1>';
-// document.body.appendChild(element)
-
 function removeDoubleSpace (str) {
   let res = '';
   for (let i = 0; i < str.length; i++){
@@ -255,8 +250,10 @@ let renderUsers = userList => {
         let card = document.createElement('div');
         card.classList.add('card');
 
+        let cardBackground = document.createElement('background-text');
+        cardBackground.textContent = user.id;
+
         let cardHeader = document.createElement('h3');
-        cardHeader.classList.add('card');
         cardHeader.textContent = user.name;
 
         let addr = removeDoubleSpace(`${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}`);
@@ -264,21 +261,22 @@ let renderUsers = userList => {
 
 
         let cardBody = document.createElement('p');
-        cardBody.classList.add('card');
         cardBody.innerHTML = `
-        <p><span>ID:</span> ${user.id}</p> 
-        <p><span>Username:</span> ${user.username}</p> 
-        <p><span>Email:</span> ${user.email}</p> 
-        <p><span>Phone:</span> ${user.phone}</p> 
-        <p><span>Website:</span> ${user.website}</p> 
-        <p><span>Company:</span> ${user.company.name}</p> 
-        <p><span>Address:</span> ${addr}</p> 
+        <p><span>Username: </span> ${user.username}</p> 
+        <p><span>Email: </span> ${user.email}</p> 
+        <p><span>Phone: </span> ${user.phone}</p> 
+        <p><span>Website: </span> ${user.website}</p> 
+        <p><span>Company: </span> ${user.company.name}</p> 
+        <p><span>Address: </span> ${addr}</p> 
         `
 
-        // let deleteButton = document.createElement('button');
-        // deleteButton.textContent = 'delete';   
-        // card.append(deleteButton);
+        let deleteButton = document.createElement('button');
+        deleteButton.textContent = 'delete';   
+        deleteButton.classList.add('delete');
+        deleteButton.style.display = 'none';
+        card.append(deleteButton);
 
+        card.append(cardBackground);
         card.append(cardHeader);
         card.append(cardBody);
 
@@ -291,43 +289,53 @@ let renderUsers = userList => {
    
 }
 
-renderUsers(users);
 
-let cards = document.querySelectorAll('div.card');
-cards.forEach(card => {
-  card.addEventListener('click', function(event){
+document.addEventListener('DOMContentLoaded', function(e){
+  
+  renderUsers(users);
+
+  let cards = document.querySelectorAll('div.card');
+  
+  cards.forEach(card => {
+    card.addEventListener('click', function(event){
     // make card active after click
-    if (event) {
       if(card.classList.toggle('active')){
-        let deleteButton = document.createElement('button');
-        deleteButton.textContent = 'delete';   
-        deleteButton.classList.add('delete');
-        card.append(deleteButton);
+        card.querySelector('button.delete').style.display = 'inline';
       } else {
-        deleteButton = document.querySelector('button.delete');
-        deleteButton.remove();
+        card.querySelector('button.delete').style.display = 'none';
       }
-    }
-
+    
+    // delete card if we click on the button
     if (event.target.className == 'delete') {
       card.remove();
     }
+    })
+      
+    // make delete button visible when we hover on it
+    card.addEventListener('mouseover', function(event){
+      card.querySelector('button.delete').style.display = 'inline';
+    })  
+  
+    card.addEventListener('mouseout', function(event){
+      if (event && !card.classList.contains('active'))  {
+        card.querySelector('button.delete').style.display = 'none';
+      }
+      })  
+    
   })
 
-  // card.addEventListener('mouseover', function(event){
-  //   if (event) {
-  //       let deleteButton = document.createElement('button');
-  //       deleteButton.textContent = 'delete';   
-  //       deleteButton.classList.add('delete');
-  //       card.append(deleteButton);
-  //       }
-  //   })  
+  // make cards unactive by cliking somewhere on thr body
+  const body = document.body;
+  body.addEventListener ('click', function(event){
+    cards.forEach(card=>{
+      console.log(event);
+      if (event.target.nodeName == 'MAIN') {
+        card.classList.remove('active');
+        card.querySelector('button.delete').style.display = 'none';
+      }
 
-  // card.addEventListener('mouseout', function(event){
-  //   if (event) {
-  //     deleteButton = document.querySelector('button.delete');
-  //     deleteButton.remove()
-  //   }
-  //   })  
-  
+    })
+  })
+
 })
+
