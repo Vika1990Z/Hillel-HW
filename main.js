@@ -328,8 +328,7 @@ document.addEventListener('DOMContentLoaded', function(e){
   const body = document.body;
   body.addEventListener ('click', function(event){
     cards.forEach(card=>{
-      console.log(event);
-      if (event.target.nodeName == 'MAIN') {
+      if (event.target.nodeName == 'MAIN' || event.target.nodeName == 'BODY') {
         card.classList.remove('active');
         card.querySelector('button.delete').style.display = 'none';
       }
