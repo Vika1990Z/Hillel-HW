@@ -1,162 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
-* {
+
+*{
     box-sizing: border-box;
 }
+
 body {
-  margin: 0;
-  font-family: "Poppins";
-  background: #f5f5f5;
+    text-align: center;
+    margin: 0;
+    font-family: "Poppins";
+    background: linear-gradient(to right, #919090,#bebebf);
 }
 
 header {
     padding: 20px 40px;
-    background: linear-gradient(to right, #4e5c8e, #121e49);
+    background:linear-gradient(to right,#252525, #dadada);
     text-align: center;
     color: white;
     text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
 }
 
 main {
-    margin: 60px auto;
+    margin: 10% auto;
     padding: 20px;
+    max-width: 1200px;
+    text-align: center;
 }
 
 .grid {
     max-width: 1200px;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 30px;
-    justify-items: center;
+    grid-template-columns: repeat(5, auto);
+    gap: 10px;
+    justify-content: space-evenly;
 }
 
-div.card {
-    position: relative;
-    width: 500px;
-    grid-column: span 6;
-    background: linear-gradient(to right, rgb(234, 232, 232), rgb(167, 166, 166));
-    padding: 10px 20px;
-    border-radius: 6px;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
-    z-index: 1;
-}
-
-div.active {
-    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.5);
-    outline: thick ridge #4e5c8eaa;
-    transform: translateY(-20px);
-    background: linear-gradient(to right,  rgba(234, 232, 232, 0.843), rgba(78, 122, 142, 0.695));
-}
-
-div.hovered {
-    position: relative;
-    width: 500px;
-    grid-column: span 6;
-    padding: 10px 20px;
-    border-radius: 6px;
-    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.5);
-    outline: thick ridge #4e5c8eaa;
-    transform: translateY(-20px);
-    background: linear-gradient(to right,  rgba(234, 232, 232, 0.843), rgba(78, 122, 142, 0.695));
-}
-
-h3, button.delete  {
+span.card {
     text-align: center;
+    line-height: 100%;
+    padding: 50px;
+    min-width: 200px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
+    border-radius: 30px;
+    font-size: 30px;
     font-weight: bolder;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.431);
-    color: #4e5c8e;
+    color: #3e4870;
+
 }
 
-
-div.active h3 {
-    text-align: start;
+span.card:hover {
+    box-shadow: 0 12px 16px 0 rgba(248, 246, 246, 0.24), 0 17px 50px 0 rgba(249, 249, 249, 0.19);   
 }
-
-div.card span {
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.339);
-    color: rgba(78, 122, 142, 1);
-    font-weight: 600;
-}
-
-div.card p {
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
-    color: #646363;
-    font-weight: 500;
-    width: 90%;
-    overflow-wrap: break-word;
-}
-
-button.delete {
-    display: inline;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 10 20px;
-    border: solid 2px rgba(131, 4, 4, 0.807);
-    border-radius: 20px;
-    background: linear-gradient(to right, #4e5c8e, #121e49);
-    color: white;
-}
-
-button.delete:hover {
-    background: linear-gradient(to right, rgb(207, 37, 37), rgb(131, 4, 4));
-    border: solid 2px #121e49;
+span.clicked {
+    background: rgba(255, 0, 0, 0.726);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-background-text{
-    text-shadow: 3px 3px 3px rgba(249, 247, 247, 0.1);
-    position: absolute;
-    width: 100%;
-    right: 0px;
-    padding: 20px;
-    font-size: 300px;
-    text-align: end;
-    font-weight: 900;
-    color:#121e491e;
-    z-index: -1;
-    line-height: 100%;
+button {
+    padding: 10px 30px;
+    color:white;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px rgba(190, 188, 188, 0.1);
+    margin: 20 10px;
+    text-align: center;
+    color:white;
+    background:linear-gradient(to right, #a8a8a9,#6e6d6d);
+    border-radius: 30px;
 }
 
-@media screen and (max-width: 1150px) {
-    main .card {
-        width: 400px;
-    }
-}  
-
-@media screen and (max-width: 935px) {
-    div.card {
-        width: 400px;
-        grid-column: 2/12;
-    }   
+button:hover {
+    background:linear-gradient(to right, #747476,#3f3f3f);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-  
 
-@media screen and (max-width: 480px) {
-    div.card {
-        width: 300px;
-        grid-column: 1/13;
-        font-size: smaller;
+.square-1 {
+    background-color: rgba(203, 184, 182, 0.713);
+}
+
+.square-2 {
+    background-color: rgba(182, 197, 203, 0.713);
+}
+
+.square-3 {
+    background-color: rgba(202, 182, 203, 0.713);
+}
+
+.square-4 {
+    background-color: rgba(185, 182, 203, 0.713);
+}
+
+.square-5 {
+    background-color: rgba(202, 203, 182, 0.713);
+}
+
+@media screen and (max-width: 1050px) {
+    span.card {
+        min-width: 150px;
+    }  
+}
+
+@media screen and (max-width: 800px) {
+    span.card {
+        min-width: unset;
+        font-size: 20px;
+        padding: 40px;
     } 
-
     .grid {
-        gap: 30px 0px;
+        gap: 30px 5px;
     }
 
     header {
         font-size: 12px;
     }
-    h3.card {
-        text-align: start;
-    }
-    main {
-        margin: 60px 0;
-        padding: 20px 0;
-    }
-    button.delete {
-        padding: 10 10px;
-        border: solid 2px rgba(131, 4, 4, 0.807);
+}
+
+@media screen and (max-width: 490px) {
+    span.card {
+        min-width: unset;
+        font-size: 15px;
+        padding: 30px;
         border-radius: 20px;
-        background: linear-gradient(to right, #4e5c8e, #121e49);
-        color: white;
-}  
+    } 
+    .grid {
+        gap: 30px 5px;
+    }
+
+    header {
+        font-size: 12px;
+    }
+    button {
+        font-size: 12px;
+    }
 }
