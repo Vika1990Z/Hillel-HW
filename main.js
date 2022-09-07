@@ -237,7 +237,6 @@ document.addEventListener('DOMContentLoaded', function(e){
   renderUsers(users);
   renderForm();
 
-
   const body = document.body;
   let main = document.querySelector('main');
   let btnAddUser = document.querySelector('.add');
@@ -246,10 +245,7 @@ document.addEventListener('DOMContentLoaded', function(e){
   let submitForm = document.querySelector('.submit');
   let form = document.querySelector('form');
 
-
-  // footer.style.display = "none";
   cards.forEach(card => cardFunctionality(card, body));
-
 
   btnAddUser.addEventListener('click', function(){
     form.style.height = "100%";
@@ -288,7 +284,6 @@ document.addEventListener('DOMContentLoaded', function(e){
         renderOneUser(newUser, bgNumber);
         newCard = main.lastChild;
         cardFunctionality(newCard, body);
-        alert (`User ${newUser.name} was Added`);
         form.style.height = "0";
 
       } else {alert ("not full information was added")}

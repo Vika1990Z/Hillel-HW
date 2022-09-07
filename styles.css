@@ -193,7 +193,7 @@ button.delete {
 
 button.add {
     position: absolute;
-    top: 145px;
+    top: 125px;
     right: 40px;
     border: solid 2px #121e49;
     background: linear-gradient(to right, #fafafa, #f2f3f7);
@@ -277,7 +277,7 @@ button.delete:hover, .closebtn:hover, .submit:hover {
 
 @media screen and (max-width: 480px) {
     div.card {
-        width: 300px;
+        width: 330px;
         grid-column: 1/13;
         font-size: smaller;
     } 
