@@ -288,6 +288,7 @@ document.addEventListener('DOMContentLoaded', function(e){
         renderOneUser(newUser, bgNumber);
         newCard = main.lastChild;
         cardFunctionality(newCard, body);
+        alert (`User ${newUser.name} was Added`);
         form.style.height = "0";
 
       } else {alert ("not full information was added")}
