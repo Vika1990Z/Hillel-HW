@@ -265,9 +265,12 @@ document.addEventListener('DOMContentLoaded', function(e){
     
     submitForm.addEventListener('click', (event) => {
       event.preventDefault();
-      inputValues = Array.from(inputs).map(input => input.value);
+      inputs.forEach(input => {
+        if (input.value === "") input.classList.add('notvalid');
+        input.addEventListener('keyup', () => input.classList.remove('notvalid'))
+      })
 
-      
+      inputValues = Array.from(inputs).map(input => input.value);
       if (!inputValues.includes('')) {
       
         let newUser = {

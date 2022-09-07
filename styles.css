@@ -154,7 +154,6 @@ background-text{
 }
 
 .input:hover {
-    border: 2px solid #2f2c45;
     box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.5);
 }
 
