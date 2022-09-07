@@ -262,11 +262,12 @@ document.addEventListener('DOMContentLoaded', function(e){
         if (e.key === 'Enter') e.preventDefault();
       })
     })
-   
     
     submitForm.addEventListener('click', (event) => {
       event.preventDefault();
       inputValues = Array.from(inputs).map(input => input.value);
+
+      
       if (!inputValues.includes('')) {
       
         let newUser = {
@@ -286,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function(e){
         cardFunctionality(newCard, body);
         form.style.height = "0";
 
-      } else {alert ("not full information was added")}
+      } else alert ("Not full information was added");
       
     }) 
     // очистка инпутов после создания новой карточки

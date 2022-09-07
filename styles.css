@@ -169,6 +169,10 @@ background-text{
     
 }
 
+.notvalid{
+    border: solid 2px rgba(131, 4, 4, 0.807);
+}
+
 
 /* BUTTONS */
 button, .submit {
@@ -193,7 +197,7 @@ button.delete {
 
 button.add {
     position: absolute;
-    top: 125px;
+    top: 135px;
     right: 40px;
     border: solid 2px #121e49;
     background: linear-gradient(to right, #fafafa, #f2f3f7);
@@ -300,6 +304,10 @@ button.delete:hover, .closebtn:hover, .submit:hover {
         padding: 10 10px;
         font-size: 10px;
         font-weight: 400;
+    }
+
+    button.add {
+        top: 120px;
     }
 
     .input-conteiner {
