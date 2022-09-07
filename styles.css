@@ -1,134 +1,312 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
-
-*{
+* {
     box-sizing: border-box;
 }
 
 body {
-    text-align: center;
+    position: relative;
+    height: 100%;
     margin: 0;
     font-family: "Poppins";
-    background: linear-gradient(to right, #919090,#bebebf);
+    background: #f5f5f5;
 }
 
 header {
     padding: 20px 40px;
-    background:linear-gradient(to right,#252525, #dadada);
+    background: linear-gradient(to right, #4e5c8e, #121e49);
     text-align: center;
     color: white;
     text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
 }
 
-main {
-    margin: 10% auto;
-    padding: 20px;
-    max-width: 1200px;
+form {
+    position: fixed;
+    z-index: 1;
+    height: 0;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    width: 100%;
+    background: linear-gradient(to right, #4e5c8e, #121e49);
     text-align: center;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    
+}
+
+form h2 {
+    margin-top: 50px;
+    grid-column: span 12;
+}
+
+main {
+    margin: 60px auto;
+    padding: 20px;
+    z-index: -1;
 }
 
 .grid {
-    max-width: 1200px;
+    max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, auto);
-    gap: 10px;
-    justify-content: space-evenly;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-items: center;
 }
 
-span.card {
-    text-align: center;
-    line-height: 100%;
-    padding: 50px;
-    min-width: 200px;
+div.card {
+    position: relative;
+    width: 500px;
+    min-height: 375px;;
+    grid-column: span 6;
+    background: linear-gradient(to right, rgb(234, 232, 232), rgb(167, 166, 166));
+    padding: 10px 20px;
+    border-radius: 6px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
-    border-radius: 30px;
-    font-size: 30px;
+    z-index: 0;
+}
+
+div.active {
+    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.5);
+    outline: thick ridge #4e5c8eaa;
+    transform: translateY(-20px);
+    background: linear-gradient(to right,  rgba(234, 232, 232, 0.843), rgba(78, 122, 142, 0.695));
+}
+
+div.hovered {
+    position: relative;
+    width: 500px;
+    grid-column: span 6;
+    padding: 10px 20px;
+    border-radius: 6px;
+    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.5);
+    outline: thick ridge #4e5c8eaa;
+    transform: translateY(-20px);
+    background: linear-gradient(to right,  rgba(234, 232, 232, 0.843), rgba(78, 122, 142, 0.695));
+}
+
+h3 {
+    text-align: center;
     font-weight: bolder;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.431);
-    color: #3e4870;
-
+    color: #4e5c8e;
 }
 
-span.card:hover {
-    box-shadow: 0 12px 16px 0 rgba(248, 246, 246, 0.24), 0 17px 50px 0 rgba(249, 249, 249, 0.19);   
-}
-span.clicked {
-    background: rgba(255, 0, 0, 0.726);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+div.active h3 {
+    text-align: start;
 }
 
-button {
-    padding: 10px 30px;
-    color:white;
-    font-size: 20px;
-    text-shadow: 3px 3px 3px rgba(190, 188, 188, 0.1);
-    margin: 20 10px;
+div.card span {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.339);
+    color: rgba(78, 122, 142, 1);
+    font-weight: 600;
+}
+
+div.card p {
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    color: #646363;
+    font-weight: 500;
+    width: 90%;
+    overflow-wrap: break-word;
+}
+
+background-text{
+    text-shadow: 3px 3px 3px rgba(249, 247, 247, 0.1);
+    position: absolute;
+    width: 100%;
+    right: 0px;
+    padding: 20px;
+    font-size: 300px;
+    text-align: end;
+    font-weight: 900;
+    color:#121e491e;
+    z-index: -1;
+    line-height: 100%;
+}
+
+
+/* FORMS */
+
+.input-conteiner {
+    width: 350px;
+    grid-column: span 6;
+    margin: 5px auto;
+}
+
+.label {
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    font-weight: 400;
+    color: white;
+    font-size: 14px;
+}
+
+.input {
+    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.2), 0 17px 50px 0 rgba(0,0,0,0.2);
+    padding: 0.8rem;
+    width: 100%;
+    border: 2px solid #2f2c45;
+    border-radius: 5px;
+    background:  #a5a2b3;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s;
+    color: #081b5e;
+}
+
+.input:hover {
+    border: 2px solid #2f2c45;
+    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.5);
+}
+
+.input::placeholder {
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.input:hover::placeholder {
+    opacity: 1;
+    
+}
+
+
+/* BUTTONS */
+button, .submit {
+    cursor: pointer;
     text-align: center;
-    color:white;
-    background:linear-gradient(to right, #a8a8a9,#6e6d6d);
-    border-radius: 30px;
+    font-weight: bolder;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.527);
+    color: white;
+    border-radius: 20px;
+    padding: 10 20px;
+    
 }
 
-button:hover {
-    background:linear-gradient(to right, #747476,#3f3f3f);
+button.delete {
+    display: inline;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: solid 2px rgba(131, 4, 4, 0.807);
+    background: linear-gradient(to right, #4e5c8e, #121e49);
+}
+
+button.add {
+    position: absolute;
+    top: 145px;
+    right: 40px;
+    border: solid 2px #121e49;
+    background: linear-gradient(to right, #fafafa, #f2f3f7);
+    color: #4e5c8e;
+
+}
+
+button.add:hover {
+    background: linear-gradient(to right, #5fae70, #0b2f0c);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+
+
+button.closebtn {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    border: solid 2px rgba(131, 4, 4, 0.807);
+    background: linear-gradient(to right, rgb(221, 40, 40), rgb(150, 4, 4));
+    border: solid 2px #121e49;
+    transition: transform 1s;
+}
+
+button.closebtn:hover {
+    transform: rotate(180deg);
+}
+
+.submit {
+    margin-bottom: 20px;
+    grid-column: 5/9;
+    width: 60%;
+    border: solid 2px #121e49;
+    background: linear-gradient(to right, rgb(207, 37, 37), rgb(131, 4, 4));
+}
+
+button.delete:hover, .closebtn:hover, .submit:hover {
+    background: linear-gradient(to right, rgb(207, 37, 37), rgb(131, 4, 4));
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.square-1 {
-    background-color: rgba(203, 184, 182, 0.713);
-}
 
-.square-2 {
-    background-color: rgba(182, 197, 203, 0.713);
-}
+@media screen and (max-width: 1150px) {
+    main .card {
+        width: 400px;
+    }
+}  
 
-.square-3 {
-    background-color: rgba(202, 182, 203, 0.713);
-}
-
-.square-4 {
-    background-color: rgba(185, 182, 203, 0.713);
-}
-
-.square-5 {
-    background-color: rgba(202, 203, 182, 0.713);
-}
-
-@media screen and (max-width: 1050px) {
-    span.card {
-        min-width: 150px;
+@media screen and (max-width: 935px) {
+    div.card {
+        width: 400px;
+        grid-column: 2/12;
+    } 
+    button.delete {
+        padding: 10 10px;
     }  
+
+    .input-conteiner {
+        width: 300px;
+    }
+}
+  
+@media screen and (max-width: 650px) {
+    .input-conteiner {
+        width: 250px;
+    }
+    .submit {
+        grid-column: 4/10;
+    }
 }
 
-@media screen and (max-width: 800px) {
-    span.card {
-        min-width: unset;
-        font-size: 20px;
-        padding: 40px;
+@media screen and (max-width: 550px) {
+    .input-conteiner {
+        width: 350px;
+        grid-column: 1/13;
+    }
+    .submit {
+        grid-column: 4/10;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    div.card {
+        width: 300px;
+        grid-column: 1/13;
+        font-size: smaller;
     } 
+
     .grid {
-        gap: 30px 5px;
+        gap: 30px 0px;
     }
 
     header {
         font-size: 12px;
     }
-}
-
-@media screen and (max-width: 490px) {
-    span.card {
-        min-width: unset;
-        font-size: 15px;
-        padding: 30px;
-        border-radius: 20px;
-    } 
-    .grid {
-        gap: 30px 5px;
+    h3.card {
+        text-align: start;
+    }
+    main {
+        margin: 60px 0;
+        padding: 20px 0;
+    }
+    button.delete {
+        padding: 10 10px;
+        font-size: 10px;
+        font-weight: 400;
     }
 
-    header {
-        font-size: 12px;
+    .input-conteiner {
+        width: 300px;
+        grid-column: 1/13;
     }
-    button {
-        font-size: 12px;
+    .submit {
+        grid-column: 3/11;
     }
 }
