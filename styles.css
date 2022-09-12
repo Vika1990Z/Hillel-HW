@@ -251,10 +251,7 @@ section{
     .welcome h2 {
         font-size: 28px;
     }
-    
-    .welcome br {
-        display: none;
-    }
+
 }
 
 
@@ -299,8 +296,5 @@ section{
     .welcome h2 {
         font-size: 28px;
     }
-    
-    .welcome br {
-        display: none;
-    }
+
 }
