@@ -8,149 +8,87 @@ body {
     height: 100%;
     margin: 0;
     font-family: "Poppins";
-    background: #f5f5f5;
-}
-
-header {
-    padding: 20px 40px;
-    background: linear-gradient(to right, #4e5c8e, #121e49);
-    text-align: center;
-    color: white;
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
-}
-
-form {
-    position: fixed;
-    z-index: 1;
-    height: 0;
-    left: 0;
-    top: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
-    width: 100%;
-    background: linear-gradient(to right, #4e5c8e, #121e49);
-    text-align: center;
-    color: white;
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
-    
-}
-
-form h2 {
-    margin-top: 50px;
-    grid-column: span 12;
-}
-
-main {
-    margin: 60px auto;
-    padding: 20px;
-    z-index: -1;
 }
 
 .grid {
-    max-width: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 30px;
+    gap: 0px;
     justify-items: center;
 }
 
-div.card {
-    position: relative;
-    width: 500px;
-    min-height: 375px;;
-    grid-column: span 6;
-    background: linear-gradient(to right, rgb(234, 232, 232), rgb(167, 166, 166));
-    padding: 10px 20px;
+.first-col {
+    overflow: hidden;
+    height: 800px;
+    grid-column: span 5;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
+
+}
+
+.second-col {
+    width: 100%;
+    height: 800px;
+    grid-column: span 7;
+    background: linear-gradient(to bottom, rgb(245, 237, 237), rgb(112, 117, 105));
     border-radius: 6px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
-    z-index: 0;
+
 }
 
-div.active {
+img{
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+form {
+    background-color: #1f2f04ad;
+    width: fit-content;
+    border: 2px solid #081b5e09;
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
+    text-align: center;
+    margin: 15% auto;
+}
+
+form:hover {
     box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.5);
-    outline: thick ridge #4e5c8eaa;
-    transform: translateY(-20px);
-    background: linear-gradient(to right,  rgba(234, 232, 232, 0.843), rgba(78, 122, 142, 0.695));
 }
 
-div.hovered {
-    position: relative;
-    width: 500px;
-    grid-column: span 6;
-    padding: 10px 20px;
-    border-radius: 6px;
-    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.5);
-    outline: thick ridge #4e5c8eaa;
-    transform: translateY(-20px);
-    background: linear-gradient(to right,  rgba(234, 232, 232, 0.843), rgba(78, 122, 142, 0.695));
-}
-
-h3 {
+form h3 {
+    margin-bottom: 50px;
     text-align: center;
     font-weight: bolder;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.431);
-    color: #4e5c8e;
+    color: white;
 }
-
-div.active h3 {
-    text-align: start;
-}
-
-div.card span {
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.339);
-    color: rgba(78, 122, 142, 1);
-    font-weight: 600;
-}
-
-div.card p {
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
-    color: #646363;
-    font-weight: 500;
-    width: 90%;
-    overflow-wrap: break-word;
-}
-
-background-text{
-    text-shadow: 3px 3px 3px rgba(249, 247, 247, 0.1);
-    position: absolute;
-    width: 100%;
-    right: 0px;
-    padding: 20px;
-    font-size: 300px;
-    text-align: end;
-    font-weight: 900;
-    color:#121e491e;
-    z-index: -1;
-    line-height: 100%;
-}
-
-
-/* FORMS */
 
 .input-conteiner {
-    width: 350px;
+    padding: 0 30px;
+    width: 300px;
     grid-column: span 6;
-    margin: 5px auto;
+    margin: auto;
 }
 
 .label {
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    text-align: center;
     font-weight: 400;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.431);
     color: white;
-    font-size: 14px;
 }
 
 .input {
+    margin-bottom: 30px;
     box-shadow: 0 12px 20px 0 rgba(0,0,0,0.2), 0 17px 50px 0 rgba(0,0,0,0.2);
     padding: 0.8rem;
     width: 100%;
-    border: 2px solid #2f2c45;
-    border-radius: 5px;
-    background:  #a5a2b3;
-    font-size: 18px;
+    border: 2px solid #2f2c4510;
+    border-radius: 30px;
+    background:  #b3b0a210;
+    font-size: 14px;
     outline: none;
     transition: all 0.3s;
-    color: #081b5e;
+    color: white
 }
 
 .input:hover {
@@ -168,152 +106,153 @@ background-text{
     
 }
 
-.notvalid{
-    border: solid 2px rgba(131, 4, 4, 0.807);
-}
-
-
-/* BUTTONS */
-button, .submit {
+.submit {
+    margin: 50px auto;
     cursor: pointer;
     text-align: center;
     font-weight: bolder;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.527);
     color: white;
-    border-radius: 20px;
-    padding: 10 20px;
-    
+    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.2), 0 17px 50px 0 rgba(0,0,0,0.2);
+    padding: 0.8rem;
+    width: 250px;
+    border: 2px solid #2f2c4510;
+    border-radius: 30px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s;
+    background: linear-gradient(to right, rgba(207, 165, 37, 0.465), rgba(131, 87, 4, 0.383));
 }
 
-button.delete {
-    display: inline;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: solid 2px rgba(131, 4, 4, 0.807);
-    background: linear-gradient(to right, #4e5c8e, #121e49);
+.submit:hover {
+    box-shadow: 0 12px 20px 0 rgba(253, 252, 252, 0.2), 0 10px 40px 0 rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to right, rgba(222, 176, 40, 0.465), rgba(152, 101, 5, 0.383));
 }
 
-button.add {
-    position: absolute;
-    top: 135px;
-    right: 40px;
-    border: solid 2px #121e49;
-    background: linear-gradient(to right, #fafafa, #f2f3f7);
-    color: #4e5c8e;
-
+input.notvalid {
+    border: solid 1px rgba(127, 22, 22, 0.645);
 }
 
-button.add:hover {
-    background: linear-gradient(to right, #5fae70, #0b2f0c);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+section{
+    position: fixed;
+    z-index: 2;
+    height: 0%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    width: 100%;
+    max-height: fit-content;
+    background: linear-gradient(to right, #242b36, #060c23);
+    text-align: center;
     color: white;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+}
+.banner{
+    position: relative;
 }
 
+.banner img {
+    z-index: 1;
+    max-height: 100%;
+    object-fit: contain;
+}
 
-button.closebtn {
+.banner h1 {
     position: absolute;
-    top: 15px;
-    right: 40px;
-    border: solid 2px rgba(131, 4, 4, 0.807);
-    background: linear-gradient(to right, rgb(221, 40, 40), rgb(150, 4, 4));
-    border: solid 2px #121e49;
-    transition: transform 1s;
+    top: 1%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.527);
+    color: white;
+    padding: 20px;
+    z-index: 3;
+    border-radius: 50px;
+    border: 2px solid #2f2c4510;
+    font-size: 40px;
+    background:  #b3b0a230;
 }
 
-button.closebtn:hover {
-    transform: rotate(180deg);
+.welcome {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    background:  #b3b0a230;
+    box-shadow: 4px 4px 6px gray;
+    text-shadow: 2px 4px 4px gray;
+    padding: 5%;
+}
+.welcome h2 {
+    font-weight: 800;
+    font-size: 34px;
+    color: white;
+    text-align: center;
 }
 
-.submit {
-    margin-bottom: 20px;
-    grid-column: 5/9;
-    width: 60%;
-    border: solid 2px #121e49;
-    background: linear-gradient(to right, rgb(207, 37, 37), rgb(131, 4, 4));
+.welcome h2 span{
+    font-size: 40px;
+    color:  #1f2f04e1;
+    font-weight:900;
 }
 
-button.delete:hover, .closebtn:hover, .submit:hover {
-    background: linear-gradient(to right, rgb(207, 37, 37), rgb(131, 4, 4));
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.welcome:hover {
+    box-shadow: 0 12px 20px 0 rgba(253, 252, 252, 0.2), 0 10px 40px 0 rgba(255, 255, 255, 0.2);
 }
 
+.logout {
+    position: sticky;
+    bottom: 1%;
+    left: 95%;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.527);
+    color: white;
+    padding: 0.5rem;
+    width: 100px;
+    border: 2px solid #2f2c4510;
+    border-radius: 30px;
+    font-size: 10px;
+    outline: none;
+    transition: all 0.3s;
+    box-shadow: 0 12px 20px 0 rgba(253, 252, 252, 0.2), 0 10px 40px 0 rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to right, #242b36, #060c23);
+   }
 
-@media screen and (max-width: 1150px) {
-    main .card {
-        width: 400px;
-    }
-}  
-
-@media screen and (max-width: 935px) {
-    div.card {
-        width: 400px;
-        grid-column: 2/12;
-    } 
-    button.delete {
-        padding: 10 10px;
-    }  
-
-    .input-conteiner {
-        width: 300px;
-    }
+.logout:hover {
+    box-shadow: 0 12px 20px 0 rgba(253, 252, 252, 0.2), 0 10px 40px 0 rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to right, rgb(222, 177, 40), rgb(152, 101, 5));
 }
-  
-@media screen and (max-width: 650px) {
+
+@media screen and (max-width: 760px) {
     .input-conteiner {
         width: 250px;
+        font-size: small;
+        padding: 0 15px;
     }
+
     .submit {
-        grid-column: 4/10;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .input-conteiner {
-        width: 350px;
-        grid-column: 1/13;
-    }
-    .submit {
-        grid-column: 4/10;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    div.card {
-        width: 330px;
-        grid-column: 1/13;
-        font-size: smaller;
-    } 
-
-    .grid {
-        gap: 30px 0px;
+        font-size: small;
+        margin: 50px auto;
+        padding: 0.8rem;
+        width: 150px;
     }
 
-    header {
-        font-size: 12px;
-    }
-    h3.card {
-        text-align: start;
-    }
-    main {
-        margin: 60px 0;
-        padding: 20px 0;
-    }
-    button.delete {
-        padding: 10 10px;
-        font-size: 10px;
-        font-weight: 400;
+    .banner h1 {
+        padding: 10px 40px;;
+        font-size: 30px;
     }
 
-    button.add {
-        top: 120px;
+    .welcome h2 span{
+        font-size: inherit;
     }
-
-    .input-conteiner {
-        width: 300px;
-        grid-column: 1/13;
+    .welcome h2 {
+        font-size: 28px;
     }
-    .submit {
-        grid-column: 3/11;
+    
+    .welcome br {
+        display: none;
     }
 }
