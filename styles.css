@@ -256,3 +256,51 @@ section{
         display: none;
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    .grid {
+        display: relative;
+    }
+    
+    .first-col {
+        position: absolute;
+        top: 0;
+    }
+    
+    .second-col {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+    } 
+ 
+    .input-conteiner {
+        width: 250px;
+        font-size: small;
+        padding: 0 15px;
+    }
+
+    .submit {
+        font-size: small;
+        margin: 50px auto;
+        padding: 0.8rem;
+        width: 150px;
+    }
+
+    .banner h1 {
+        padding: 10px 40px;;
+        font-size: 30px;
+    }
+
+    .welcome h2 span{
+        font-size: inherit;
+    }
+    .welcome h2 {
+        font-size: 28px;
+    }
+    
+    .welcome br {
+        display: none;
+    }
+}
