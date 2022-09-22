@@ -43,6 +43,8 @@ body {
 
 .slider-dots {
     text-align: center;
+    list-style-type: none;
+    padding: 0
 }
 
 .slider-dot {
@@ -55,7 +57,6 @@ body {
     content: "\220E";
     font-size: 25px;
     text-shadow: 5px 5px 10px rgba(169, 166, 166, 0.527);
-    
 }
 
 .slider-dot:hover {
@@ -92,16 +93,14 @@ body {
 
 .arrow-next {
     right: 5%;
-
 }
 
 .arrow-prev::before {
     content: "\21E6";
-
 }
+
 .arrow-next::after {
     content: "\21E8";
-
 }
 
 
@@ -136,4 +135,42 @@ button.arrows {
     top: 100%;
     right: 25%;
     background:linear-gradient(to right, #f03b04,#5a0202);
+}
+
+@media screen and (max-width: 500px) {
+
+    body {
+        margin: 5px;
+    }
+    
+    .slider-list {
+        width: 50%;
+    }
+
+    .slider-slide {
+        padding: 50px 20px;
+        font-size: 26px;
+    }  
+    
+    .slider-dot::before {
+        font-size: 20px;
+    }
+
+    .arrow {
+        font-size: 36px;
+    }
+
+    .slider-autoplay button {
+        padding: 5px 20px;
+        font-size: 14px;
+
+    }
+
+    .play {
+        left: 15%;
+    }
+     
+    .stop {
+        right: 15%;
+    }
 }
