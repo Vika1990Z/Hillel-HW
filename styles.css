@@ -1,176 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    position: relative;
+  margin: 0;
+  font-family: "Poppins";
+  background: #6274b2;
+}
+
+header {
+    width: 1200px;
+    padding: 20px 40px;
+    background: linear-gradient(to right, #4e5c8e, #121e49);
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.431);
+}
+
+table {
+    width: 1200px;
     height: 100%;
-    margin: 10px;
-    font-family: "Poppins";
-    background-color: rgba(0, 0, 0, 0.828); 
+    border-spacing: 0px;
+    color: white;
+    background: linear-gradient(to right, #6274b2, #203789);
 }
 
-.slider-list {
-    position: relative;
-    width: 70%;
-    overflow-x: hidden;
-    margin: 50px auto 10px auto;
+th, td {
+    padding: 15px;
 }
 
-.slider-track {
-    white-space: nowrap;
-    transform: translateX(0%);
-    transition: 1.5s all;
+tr:nth-child(1) {
+    background-color: #edefef;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.431);
+    color: #4e5c8e;
 }
 
-.slider-slide {
-    text-align: center;
-    vertical-align: baseline;
-    width: 100%;
-    display: inline-block;
-    height: 300px;
-    border: 3px solid rgb(0, 5, 19);
-    padding: 50px 20px;
-    border-radius: 6px;
-    font-weight: bolder;
-    text-shadow: 5px 5px 10px rgba(11, 11, 11, 0.527);
-    font-size: 46px;
-    color: rgb(78, 92, 142);
-    background-image: linear-gradient(to bottom, rgb(1, 0, 2), rgb(125, 122, 125));
-
+.id {
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.431);
+    font-weight: 700;
 }
 
-.slider-dots {
-    text-align: center;
-    list-style-type: none;
-    padding: 0
+.hovered_row {
+    background-color: rgba(5, 114, 151, 0.445);
 }
 
-.slider-dot {
-    display: inline-block;
-    letter-spacing: -1rem;
-
-}
-
-.slider-dot::before {
-    content: "\220E";
-    font-size: 25px;
-    text-shadow: 5px 5px 10px rgba(169, 166, 166, 0.527);
-}
-
-.slider-dot:hover {
-    color:rgb(36, 211, 211);
-
-}
-
-.slider-dot button {
-    pointer-events: none;
-    border: none;
-    background-color: transparent;
-    color: transparent;
-}
-
-
-.slider-arrows {
-    list-style-type: none;
-}
-
-.arrow {
-    position: absolute;
-    top: 40%;
-    text-shadow: 5px 5px 10px rgba(2, 2, 2, 0.583), 5px 0 5px rgb(78, 92, 142);
-    font-size: 46px;
-}
-
-.arrow:hover {
-    text-shadow: 5px 5px 10px rgba(247, 245, 245, 0.527);
-}
-
-.arrow-prev {
-    left: 5%;
-}
-
-.arrow-next {
-    right: 5%;
-}
-
-.arrow-prev::before {
-    content: "\21E6";
-}
-
-.arrow-next::after {
-    content: "\21E8";
-}
-
-
-button.arrows {
-    display: none;
-}
-
-.slider-autoplay button {
-    padding: 10px 30px;
-    font-size: 16px;
-    font-weight: 800;
-    text-shadow: 5px 5px 10px rgba(2, 2, 2, 0.583), 5px 0 5px rgb(78, 92, 142);
-    text-align: center;
-    border-radius: 30px;
-}
-
-.slider-autoplay button:hover {
-    text-shadow: 5px 5px 10px rgba(255, 254, 254, 0.262);
-    box-shadow: 5px 5px 10px rgba(255, 254, 254, 0.469), 5px 0 5px rgb(78, 92, 142);;
-}
-
-
-.play {
-    position: absolute;
-    top: 100%;
-    left: 25%;
-    background:linear-gradient(to right, #15875f,#073902);
-}
- 
-.stop {
-    position: absolute;
-    top: 100%;
-    right: 25%;
-    background:linear-gradient(to right, #f03b04,#5a0202);
-}
-
-@media screen and (max-width: 500px) {
-
-    body {
-        margin: 5px;
-    }
-    
-    .slider-list {
-        width: 50%;
-    }
-
-    .slider-slide {
-        padding: 50px 20px;
-        font-size: 26px;
-    }  
-    
-    .slider-dot::before {
-        font-size: 20px;
-    }
-
-    .arrow {
-        font-size: 36px;
-    }
-
-    .slider-autoplay button {
-        padding: 5px 20px;
-        font-size: 14px;
-
-    }
-
-    .play {
-        left: 15%;
-    }
-     
-    .stop {
-        right: 15%;
-    }
+.clicked_row {
+    background-color: rgb(5, 115, 151);
 }

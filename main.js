@@ -1,249 +1,283 @@
+// const users = [
+//     {
+//       "id": 1,
+//       "name": "Leanne Graham",
+//       "username": "Bret",
+//       "email": "Sincere@april.biz",
+//       "address": {
+//         "street": "Kulas Light",
+//         "suite": "Apt. 556",
+//         "city": "Gwenborough",
+//         "zipcode": "92998-3874",
+//         "geo": {
+//           "lat": "-37.3159",
+//           "lng": "81.1496"
+//         }
+//       },
+//       "phone": "1-770-736-8031 x56442",
+//       "website": "hildegard.org",
+//       "company": {
+//         "name": "Romaguera-Crona",
+//         "catchPhrase": "Multi-layered client-server neural-net",
+//         "bs": "harness real-time e-markets"
+//       }
+//     },
+//     {
+//       "id": 2,
+//       "name": "Ervin Howell",
+//       "username": "Antonette",
+//       "email": "Shanna@melissa.tv",
+//       "address": {
+//         "street": "Victor Plains",
+//         "suite": "Suite 879",
+//         "city": "Wisokyburgh",
+//         "zipcode": "90566-7771",
+//         "geo": {
+//           "lat": "-43.9509",
+//           "lng": "-34.4618"
+//         }
+//       },
+//       "phone": "010-692-6593 x09125",
+//       "website": "anastasia.net",
+//       "company": {
+//         "name": "Deckow-Crist",
+//         "catchPhrase": "Proactive didactic contingency",
+//         "bs": "synergize scalable supply-chains"
+//       }
+//     },
+//     {
+//       "id": 3,
+//       "name": "Clementine Bauch",
+//       "username": "Samantha",
+//       "email": "Nathan@yesenia.net",
+//       "address": {
+//         "street": "Douglas Extension",
+//         "suite": "Suite 847",
+//         "city": "McKenziehaven",
+//         "zipcode": "59590-4157",
+//         "geo": {
+//           "lat": "-68.6102",
+//           "lng": "-47.0653"
+//         }
+//       },
+//       "phone": "1-463-123-4447",
+//       "website": "ramiro.info",
+//       "company": {
+//         "name": "Romaguera-Jacobson",
+//         "catchPhrase": "Face to face bifurcated interface",
+//         "bs": "e-enable strategic applications"
+//       }
+//     },
+//     {
+//       "id": 4,
+//       "name": "Patricia Lebsack",
+//       "username": "Karianne",
+//       "email": "Julianne.OConner@kory.org",
+//       "address": {
+//         "street": "Hoeger Mall",
+//         "suite": "Apt. 692",
+//         "city": "South Elvis",
+//         "zipcode": "53919-4257",
+//         "geo": {
+//           "lat": "29.4572",
+//           "lng": "-164.2990"
+//         }
+//       },
+//       "phone": "493-170-9623 x156",
+//       "website": "kale.biz",
+//       "company": {
+//         "name": "Robel-Corkery",
+//         "catchPhrase": "Multi-tiered zero tolerance productivity",
+//         "bs": "transition cutting-edge web services"
+//       }
+//     },
+//     {
+//       "id": 5,
+//       "name": "Chelsey Dietrich",
+//       "username": "Kamren",
+//       "email": "Lucio_Hettinger@annie.ca",
+//       "address": {
+//         "street": "Skiles Walks",
+//         "suite": "Suite 351",
+//         "city": "Roscoeview",
+//         "zipcode": "33263",
+//         "geo": {
+//           "lat": "-31.8129",
+//           "lng": "62.5342"
+//         }
+//       },
+//       "phone": "(254)954-1289",
+//       "website": "demarco.info",
+//       "company": {
+//         "name": "Keebler LLC",
+//         "catchPhrase": "User-centric fault-tolerant solution",
+//         "bs": "revolutionize end-to-end systems"
+//       }
+//     },
+//     {
+//       "id": 6,
+//       "name": "Mrs. Dennis Schulist",
+//       "username": "Leopoldo_Corkery",
+//       "email": "Karley_Dach@jasper.info",
+//       "address": {
+//         "street": "Norberto Crossing",
+//         "suite": "Apt. 950",
+//         "city": "South Christy",
+//         "zipcode": "23505-1337",
+//         "geo": {
+//           "lat": "-71.4197",
+//           "lng": "71.7478"
+//         }
+//       },
+//       "phone": "1-477-935-8478 x6430",
+//       "website": "ola.org",
+//       "company": {
+//         "name": "Considine-Lockman",
+//         "catchPhrase": "Synchronised bottom-line interface",
+//         "bs": "e-enable innovative applications"
+//       }
+//     },
+//     {
+//       "id": 7,
+//       "name": "Kurtis Weissnat",
+//       "username": "Elwyn.Skiles",
+//       "email": "Telly.Hoeger@billy.biz",
+//       "address": {
+//         "street": "Rex Trail",
+//         "suite": "Suite 280",
+//         "city": "Howemouth",
+//         "zipcode": "58804-1099",
+//         "geo": {
+//           "lat": "24.8918",
+//           "lng": "21.8984"
+//         }
+//       },
+//       "phone": "210.067.6132",
+//       "website": "elvis.io",
+//       "company": {
+//         "name": "Johns Group",
+//         "catchPhrase": "Configurable multimedia task-force",
+//         "bs": "generate enterprise e-tailers"
+//       }
+//     },
+//     {
+//       "id": 8,
+//       "name": "Nicholas Runolfsdottir V",
+//       "username": "Maxime_Nienow",
+//       "email": "Sherwood@rosamond.me",
+//       "address": {
+//         "street": "Ellsworth Summit",
+//         "suite": "Suite 729",
+//         "city": "Aliyaview",
+//         "zipcode": "45169",
+//         "geo": {
+//           "lat": "-14.3990",
+//           "lng": "-120.7677"
+//         }
+//       },
+//       "phone": "586.493.6943 x140",
+//       "website": "jacynthe.com",
+//       "company": {
+//         "name": "Abernathy Group",
+//         "catchPhrase": "Implemented secondary concept",
+//         "bs": "e-enable extensible e-tailers"
+//       }
+//     },
+//     {
+//       "id": 9,
+//       "name": "Glenna Reichert",
+//       "username": "Delphine",
+//       "email": "Chaim_McDermott@dana.io",
+//       "address": {
+//         "street": "Dayna Park",
+//         "suite": "Suite 449",
+//         "city": "Bartholomebury",
+//         "zipcode": "76495-3109",
+//         "geo": {
+//           "lat": "24.6463",
+//           "lng": "-168.8889"
+//         }
+//       },
+//       "phone": "(775)976-6794 x41206",
+//       "website": "conrad.com",
+//       "company": {
+//         "name": "Yost and Sons",
+//         "catchPhrase": "Switchable contextually-based project",
+//         "bs": "aggregate real-time technologies"
+//       }
+//     },
+//     {
+//       "id": 10,
+//       "name": "Clementina DuBuque",
+//       "username": "Moriah.Stanton",
+//       "email": "Rey.Padberg@karina.biz",
+//       "address": {
+//         "street": "Kattie Turnpike",
+//         "suite": "Suite 198",
+//         "city": "Lebsackbury",
+//         "zipcode": "31428-2261",
+//         "geo": {
+//           "lat": "-38.2386",
+//           "lng": "57.2232"
+//         }
+//       },
+//       "phone": "024-648-3804",
+//       "website": "ambrose.net",
+//       "company": {
+//         "name": "Hoeger LLC",
+//         "catchPhrase": "Centralized empowering task-force",
+//         "bs": "target end-to-end models"
+//       }
+//     }
+//   ]
 
-class Slider {
+let renderUsers = () => {
+  
+  let table = $("<table></table>");
+  let tableHeader = $("<tr></tr>").html(`
+    <th>ID</th>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Website</th>
+  `);
 
-  defaultSettings = {
-    loop:false,
-    arrows: false,
-    dots: false,
-    autoplay: {
-      play: false,
-      speed: 0,  
-      duration: 0,
-    },
-  }
+  table.append(tableHeader);
 
-  state = {
-    currentSlide: 0,
-  }
-
-  templates = {
-    renderDots: function (slides) {
-      return (
-        `<ul class="slider-dots">
-            ${slides.map(function (_, index) {
-              return (
-                `<li class="slider-dot">
-                   <button type="button">${index + 1}</button>
-                 </li>`
-              )
-            }).join('')}
-        </ul>`
-      )
-    },
-
-    renderArrows: function () {
-      return (
-        `<ul class="slider-arrows">
-           <li class="arrow arrow-prev">
-             <button class='arrows' type="button">prev</button>
-           </li>
-           <li class="arrow arrow-next">
-             <button class='arrows' type="button">next</button>
-           </li>
-        </ul>`
-      )
-    },
-
-    renderTrack: function(slides) {
-      return `
-      <div class="slider-list">
-        <div class="slider-track">
-          ${slides}
-        </div>
-      </div>
-      `
-    },
-
-    renderSlides: function(slides) {
-      return slides.map(slide => `<div class='slider-slide'>${slide.outerHTML}</div>`).join('');
-    },
-
-    renderAutoplay: function () {
-      return (
-        `<form class="slider-autoplay">
-            <label style="display:none" class="label" for="autoplay">Set Timeout in seconds</label>
-            <input style="display:none" class="input" type="text" name="autoplay" id="autoplay" placeholder="5">
-             <button class='play' type="submit">Play</button>
-             <button class='stop' type="button">Stop</button>
-        </form>`
-      )
-    },
-  }
-
-  constructor (settings) {
-    this.settings = Object.assign(this.defaultSettings, settings);
-  }
-
-  setState(state) {
-    this.state = Object.assign(this.state, state);
-  }
-
-
-  render() {
-    const slider = document.querySelector(this.settings.selector);
-    const children = Array.from(slider.children);
-    const slides = this.templates.renderSlides(children);
-    const track = this.templates.renderTrack(slides);
-
-    slider.innerHTML = track;
- 
-    if (this.settings.dots) {
-      const dots = this.templates.renderDots(children);
-      slider.insertAdjacentHTML('beforeend', dots);
-    }
-
-    if (this.settings.arrows) {
-      const arrows = this.templates.renderArrows();
-      slider.insertAdjacentHTML('beforeend', arrows);
-    }
-
-    if (this.settings.autoplay.play) {
-      const autoplay = this.templates.renderAutoplay();
-      slider.insertAdjacentHTML('beforeend', autoplay);
-    }
-
-    let state = {
-        slidesCount: children.length,
-        elements: {
-          slider,
-          track: slider.querySelector('.slider-track'),
-          next: slider.querySelector('.arrow-next'),
-          prev: slider.querySelector('.arrow-prev'),
-          dots: slider.querySelector('.slider-dots'),
-          autoplay: slider.querySelector('.slider-autoplay'),
-      }
-    }
-    this.setState(state);
-    
-  }
-
-  next() {
-    const track = this.state.elements.track;
-    let slidesCount = this.state.slidesCount;
-
-    if(Math.abs(this.state.currentSlide) === slidesCount - 1 && !this.settings.loop) return;
-
-    if (Math.abs(this.state.currentSlide) === slidesCount - 1) {
-      this.state.currentSlide = 0;
-      track.style.transform = `translateX(0%)`;  
-
-    } else {
-        this.state.currentSlide -= 1;
-        track.style.transform = `translateX(${this.state.currentSlide * 100}%)`;
-      }
-
-  }
-
-  prev() {
-    const track = this.state.elements.track;
-    let slidesCount = this.state.slidesCount;
-
-    if (this.state.currentSlide === 0 && !this.settings.loop) return;
-    
-    if (this.state.currentSlide === 0) {
-      this.state.currentSlide = -(slidesCount - 1);
-      track.style.transform = `translateX(${this.state.currentSlide * 100}%)`;
-
-    } else {
-        this.state.currentSlide += 1;
-        track.style.transform = `translateX(${this.state.currentSlide * 100}%)`;
-    }
-  }
-
-  arrowsEvents() {
-    const { elements: { next, prev, } } = this.state;
-    
-    next.addEventListener('click', this.next.bind(this)); 
-
-    prev.addEventListener('click', this.prev.bind(this));
-  }
-
-  moveSlide(e) {
-    const track = this.state.elements.track;
-    const dot = e.target;
-
-    if (dot.classList.contains('slider-dot')) {
-      this.state.currentSlide = -(dot.textContent - 1);
-      track.style.transform = `translateX(${this.state.currentSlide * 100}%)`;
-    }
-  }
-
-  dotsEvents() {
-    const dots = this.state.elements.dots;
-    dots.addEventListener('click', this.moveSlide.bind(this));
-  }
-
-  autoPlayHeandler() {
-    const track = this.state.elements.track;
-    let slidesCount = this.state.slidesCount;
-
-    // чтоб автоплей не останавливался на последнем слайде даже если loop false,
-    // как было бы если бы просто вызывали this.next()
-    if (Math.abs(this.state.currentSlide) === slidesCount - 1) {
-      this.state.currentSlide = 1;
-      track.style.transform = `translateX(${this.state.currentSlide * 100}%)`;  
-    }
-    this.next(); 
-  }
-
-  autoPlay(e){
-    const autoplay = this.state.elements.autoplay; 
-    const playButton = autoplay.querySelector('button.play');
-
-    e.preventDefault();    
-    console.log('start autoplay');
-    playButton.disabled = true;
-
-    let timerId = setInterval(this.autoPlayHeandler.bind(this), this.settings.autoplay.speed);
-    setTimeout(() => { 
-      clearInterval(timerId); 
-      console.log('stop'); 
-      playButton.disabled = false;
-    }, this.settings.autoplay.duration);
-  }
-
-  stop() {
-    const autoplay = this.state.elements.autoplay; 
-    const playButton = autoplay.querySelector('button.play');
-
-    console.log('stop autoplay');
-    for (let i = setTimeout(()=>{}, 0); i > 0; i--) {
-      clearInterval(i);
-    }
-    playButton.disabled = false;
-  }
-
-  autoPlayEvents() {
-    if (!this.settings.autoplay.play) return;
-    const autoplay = this.state.elements.autoplay; 
-    const playButton = autoplay.querySelector('button.play');
-    const stopButton = autoplay.querySelector('button.stop');
-    
-    playButton.addEventListener('click',  this.autoPlay.bind(this));
-    stopButton.addEventListener('click',  this.stop.bind(this));
-    
-  }
-
-  init() {
-    console.log('init');
-    this.render();
-    this.arrowsEvents();
-    this.dotsEvents();
-    this.autoPlayEvents();
-
-  }
+  $.ajax("https://jsonplaceholder.typicode.com/users")
+  .done(users => {
+    users.forEach(user => {
+      let row = $("<tr></tr>").html(`
+      <td> ${user.id}</td>
+      <td> ${user.name}</td>
+      <td> ${user.username}</td>
+      <td> ${user.email}</td>
+      <td> ${user.phone}</td>
+      <td>${user.website}</td>
+      `);
+  
+      row.on({
+        mouseenter: function(){
+          $(this).addClass('hovered_row');
+        },
+        mouseleave: function(){
+          $(this).removeClass('hovered_row');
+        },
+        click: function(){
+          $(this).toggleClass('clicked_row');
+        }
+      });
+  
+      table.append(row);
+    });
+  })
+  
+  $("body").append(table);
+  $('td:first-child').addClass('id');
 }
 
-const slider = new Slider({
-  selector: ".your-class",
-  arrows: true,
-  dots: true,
-  loop: false,
-  autoplay: {
-    play: true,
-    speed: 1700,   // пока менять настройки автоплея можно тут, в будущем можно добавть поле в браузер
-    duration: 50000,
-  },
-})
+$(document).ready(function(){
+  renderUsers();
+});
 
-slider.init();
