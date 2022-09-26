@@ -11,7 +11,9 @@ body {
 }
 
 header {
-    width: 1200px;
+    min-width: 891px;
+    max-width: 1600px;
+    width: 100%;
     padding: 20px 40px;
     background: linear-gradient(to right, #4e5c8e, #121e49);
     text-align: center;
@@ -20,7 +22,8 @@ header {
 }
 
 table {
-    width: 1200px;
+    max-width: 1600px;
+    width: 100%;
     height: 100%;
     border-spacing: 0px;
     color: white;
