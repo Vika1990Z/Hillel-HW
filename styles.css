@@ -11,8 +11,6 @@ body {
 }
 
 header {
-    min-width: 891px;
-    max-width: 1600px;
     width: 100%;
     padding: 20px 40px;
     background: linear-gradient(to right, #4e5c8e, #121e49);
@@ -21,34 +19,25 @@ header {
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.431);
 }
 
-table {
-    max-width: 1600px;
+main {
+    position: relative;
     width: 100%;
-    height: 100%;
-    border-spacing: 0px;
-    color: white;
-    background: linear-gradient(to right, #6274b2, #203789);
 }
 
-th, td {
-    padding: 15px;
+.square {
+    margin-top: 10%;
+    position: absolute;
+    width: 10%;
+    height: 0;
+    padding-bottom: 10%;
+    border: 3px solid rgb(24, 24, 90);
+    background: linear-gradient(to right, #18124f, #0b0b0b);
+    box-shadow: 5px 5px 10px rgba(1, 1, 1, 0.469);
 }
 
-tr:nth-child(1) {
-    background-color: #edefef;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.431);
-    color: #4e5c8e;
-}
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 1em;
+    }
 
-.id {
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.431);
-    font-weight: 700;
-}
-
-.hovered_row {
-    background-color: rgba(5, 114, 151, 0.445);
-}
-
-.clicked_row {
-    background-color: rgb(5, 115, 151);
 }
