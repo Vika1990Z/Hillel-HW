@@ -1,13 +1,24 @@
-# ДЗ 23. MakePairs. 
+# ДЗ 24. getAccess. 
 
-Напишите функцию, которая возвращает вложенный массив вида [[key, value], [key,
-value]].
+Реализовать метод так, чтобы для для каждого объекта выводились корректные данные.
 
 ```js
-const makePairs = function(object){
+function getAccess() {
   console.log('Напишите здесь свое решение');
-};
+}
 
-const data = { a: 1, b: 2 };
-console.log(makePairs(data)); // [['a', 1], ['b', 2]]
+const guest = {
+  firstName: "John",
+  lastName: "Konor",
+  access: false,
+}
+
+const admin = {
+  firstName:"Bob",
+  lastName: "Morley",
+  access: true,
+}
+
+console.log(guest.getAccess());// "Sorry, you don't have access, John Konor"
+console.log(admin.getAccess());// "Access granted, welcome Bob Morley"
 ```
