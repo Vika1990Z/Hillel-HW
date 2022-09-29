@@ -1,15 +1,15 @@
-# ДЗ 21. IsEmpty. 
+# ДЗ 22. IsEqual. 
 
-Напишите функцию, которая делает поверхностную проверку объекта на пустоту.
+Напишите функцию, которая поверхностно сравнивает два объекта.
 
 ```js
-const isEmpty = function(object){
+const isEqual = function(firstObject, secondObject){
   console.log('Напишите здесь свое решение');
 };
 
-const data = { a: 1, b: undefined };
-const data2 = { a: undefined };
-console.log(isEmpty(data)); // false
-console.log(isEmpty(data2)); // true
+const data = { a: 1, b: 1 };
+const data2 = { a: 1, b: 1 };
+const data3 = { a: 1, b: 2 };
+console.log(isEqual(data, data2)); // true
+console.log(isEqual(data, data3)); // false
 ```
-
