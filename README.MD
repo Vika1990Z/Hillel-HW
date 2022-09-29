@@ -1,17 +1,15 @@
-# ДЗ 17. IsEqual. 
+# ДЗ 18. Палиндром
 
-Напишите функцию, которая сравнивает два массива и возвращает true, если они идентичны.
+Палиндромом называют слово или фразу, которая читается в обе стороны одинаково.  
+В этом задании нужно написать функцию, которая проверяет, является ли исходная строка палиндромом.
 
 ```js
-const isEqual = (firstArray, secondArray) => {
-  // Напишите здесь свое решение
+function palindrome(str) {
+  console.log('Напишите ваше решение здесь')
 }
 
-const arr1 = [1, 2, 3, 4];
-const arr2 = [1, 2, 3, 4];
-const arr3 = [1, 2, 3, 5];
-const arr4 = [1, 2, 3, 4, 5];
-console.log(isEqual(arr1, arr2)); // true
-console.log(isEqual(arr1, arr3)); // false
-console.log(isEqual(arr1, arr4)); // false
+console.log(palindrome('racecar')); // true
+console.log(palindrome('table')); // false
+console.log(palindrome('Анна')); // true
+console.log(palindrome('А роза упала на лапу Азора')); // true
 ```
