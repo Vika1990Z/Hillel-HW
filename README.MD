@@ -1,15 +1,15 @@
-# ДЗ 18. Палиндром
+# ДЗ 21. IsEmpty. 
 
-Палиндромом называют слово или фразу, которая читается в обе стороны одинаково.  
-В этом задании нужно написать функцию, которая проверяет, является ли исходная строка палиндромом.
+Напишите функцию, которая делает поверхностную проверку объекта на пустоту.
 
 ```js
-function palindrome(str) {
-  console.log('Напишите ваше решение здесь')
-}
+const isEmpty = function(object){
+  console.log('Напишите здесь свое решение');
+};
 
-console.log(palindrome('racecar')); // true
-console.log(palindrome('table')); // false
-console.log(palindrome('Анна')); // true
-console.log(palindrome('А роза упала на лапу Азора')); // true
+const data = { a: 1, b: undefined };
+const data2 = { a: undefined };
+console.log(isEmpty(data)); // false
+console.log(isEmpty(data2)); // true
 ```
+
