@@ -1,24 +1,20 @@
-# ДЗ 24. getAccess. 
+# ДЗ 25. call, apply, bind. 
 
-Реализовать метод так, чтобы для для каждого объекта выводились корректные данные.
+Напишите все возможные варианты для подмены контекста чтобы вызов метода getFullName вывел нужный результат.
 
 ```js
-function getAccess() {
-  console.log('Напишите здесь свое решение');
-}
-
-const guest = {
+const quest = {
   firstName: "John",
   lastName: "Konor",
-  access: false,
+  getFullName: function () {
+    return this.firstName + ' ' + this.lastName;
+  },
 }
 
 const admin = {
   firstName:"Bob",
   lastName: "Morley",
-  access: true,
 }
 
-console.log(guest.getAccess());// "Sorry, you don't have access, John Konor"
-console.log(admin.getAccess());// "Access granted, welcome Bob Morley"
+console.log(quest.getFullName()); // "Bob Morley"
 ```
