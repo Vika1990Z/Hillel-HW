@@ -1,15 +1,13 @@
-# ДЗ 18. Палиндром
+# ДЗ 19. isPlainObject. 
 
-Палиндромом называют слово или фразу, которая читается в обе стороны одинаково.  
-В этом задании нужно написать функцию, которая проверяет, является ли исходная строка палиндромом.
+Напишите функцию, которая проверяет, является ли элемент именно простым объектом, а не массивом, null и т.п.
 
 ```js
-function palindrome(str) {
-  console.log('Напишите ваше решение здесь')
-}
+const isPlainObject = function(element){
+  console.log('Напишите здесь свое решение');
+};
 
-console.log(palindrome('racecar')); // true
-console.log(palindrome('table')); // false
-console.log(palindrome('Анна')); // true
-console.log(palindrome('А роза упала на лапу Азора')); // true
+const data = { a: 1 };
+console.log(isPlainObject(data)); // true
 ```
+
