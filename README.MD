@@ -1,12 +1,12 @@
-# ДЗ 14. Определить в каком регистре записан n-й символ строки
+# ДЗ 15. Compact. 
 
-Напишите функцию isUpperCase(str, character), которая определяет в каком регистре написан символ строки в указанной позиции.  
-Если в верхнем регистре выводится - true, если в нижнем - false.
+Напишите функцию, которая очищает массив от нежелательных значений, таких как false, undefined, пустые строки, ноль, null.
 
 ```js
-function isUpperCase(str, character) {
-    ...ваш код...
-};
+const compact = (array) => {
+ // Напишите здесь свое решение
+}
 
-console.log(isUpperCase('tasks JavaScript', 6)); // true
+const data = [0, 1, false, 2, undefined, '', 3, null];
+console.log(compact(data)) // [1, 2, 3]
 ```
