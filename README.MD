@@ -1,14 +1,12 @@
-# ДЗ 11. Удалить все не буквенно-цифровые символы
+# ДЗ 12. Сравнение строк без учёта регистра
 
-Напишите функцию remove_char(str), которая возвращает строку, очищенную от всех
-не буквенно-цифровых символов. 
+Напишите функцию comparison(str1, str2), которая сравнивает строки без учёта регистра символов.
 
 ```js
-var str = "every., -/ hunter #! wishes ;: {} to $ % ^ & * know";  
- 
-function removeСhar(str) {
+function compareString(str1, str2) {
     ...ваш код...
 };
 
-console.log(removeСhar(str)); // "every hunter wishes to know"
+console.log(compareString('string', 'StRiNg')); // true 
+console.log(compareString('ABCDe', 'AbcdW'));   // false
 ```
