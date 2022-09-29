@@ -1,15 +1,12 @@
-# ДЗ 18. Палиндром
+# ДЗ 20. Without. 
 
-Палиндромом называют слово или фразу, которая читается в обе стороны одинаково.  
-В этом задании нужно написать функцию, которая проверяет, является ли исходная строка палиндромом.
+Напишите функцию, которая возвращает новый объект без указанных значений.
 
 ```js
-function palindrome(str) {
-  console.log('Напишите ваше решение здесь')
-}
+const without = function(object, ...args){
+  console.log('Напишите здесь свое решение');
+};
 
-console.log(palindrome('racecar')); // true
-console.log(palindrome('table')); // false
-console.log(palindrome('Анна')); // true
-console.log(palindrome('А роза упала на лапу Азора')); // true
+const data = { a: 1, b: 2, c: 3 };
+console.log(without(data, 'b', 'c')); // { a: 1 }
 ```
