@@ -238,7 +238,7 @@ const slider = new Slider({
   selector: ".your-class",
   arrows: true,
   dots: true,
-  loop: false,
+  loop: true,
   autoplay: {
     play: true,
     speed: 1700,   // пока менять настройки автоплея можно тут, в будущем можно добавть поле в браузер

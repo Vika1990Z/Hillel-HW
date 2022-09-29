@@ -119,7 +119,7 @@ button.arrows {
 
 .slider-autoplay button:hover {
     text-shadow: 5px 5px 10px rgba(255, 254, 254, 0.262);
-    box-shadow: 5px 5px 10px rgba(255, 254, 254, 0.469), 5px 0 5px rgb(78, 92, 142);;
+    box-shadow: 5px 5px 10px rgba(255, 254, 254, 0.469), 5px 0 5px rgb(78, 92, 142);
 }
 
 
