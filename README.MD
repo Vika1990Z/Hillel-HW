@@ -1,15 +1,13 @@
-# ДЗ 22. IsEqual. 
+# ДЗ 23. MakePairs. 
 
-Напишите функцию, которая поверхностно сравнивает два объекта.
+Напишите функцию, которая возвращает вложенный массив вида [[key, value], [key,
+value]].
 
 ```js
-const isEqual = function(firstObject, secondObject){
+const makePairs = function(object){
   console.log('Напишите здесь свое решение');
 };
 
-const data = { a: 1, b: 1 };
-const data2 = { a: 1, b: 1 };
-const data3 = { a: 1, b: 2 };
-console.log(isEqual(data, data2)); // true
-console.log(isEqual(data, data3)); // false
+const data = { a: 1, b: 2 };
+console.log(makePairs(data)); // [['a', 1], ['b', 2]]
 ```
