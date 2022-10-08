@@ -42,6 +42,7 @@ The names of the branches correspond to the number of the homework.
 | ДЗ 34. Additional Slider functionality | [home-work-34](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-34) | В классную работу по созданию слайдера добавить функционал: loop и autoplay |
 | ДЗ 35. Render users to table, use only jQuery | [home-work-35](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-35) | На базе ДЗ 26. RenderUsers вывести данные в таблице основываясь на объекте - использовать только jQuery. |
 | ДЗ 36. Animate cube | [home-work-36](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-36) | Добавить квадрат на страницу. На клике, он должен начать двигаться слева направо - использовать setInterval. |
+| ДЗ 37. Add users. Use JSONPlaceholder API. | [home-work-37](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-37) | Добавить квадрат на страницу. На клике, он должен начать двигаться слева направо - использовать setInterval. | Создать карточки с пользователями используя fetch |
 
 
 
