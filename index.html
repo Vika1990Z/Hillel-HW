@@ -1,13 +1,55 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HomeWork-20</title>
+    <title>HomeWork-37</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="main.js">
+   
+</head>
+<body>
+    <header>
+        <h1>Our Posts</h1>
+    </header>
+    <main>
+        <div class="empty">No added posts</div>
 
-  </head>
-  <body>
-  <script src="HomeWork_20.js"></script>
-  </body>
-</html> 
+        <button class="add">Add new post</button>
+        <form class="grid">
+            <button class="closebtn">&times;</button>
+            <h2>Add New Post</h2>
+            <div class="input-conteiner">
+                <label class="label" for="title">Enter title</label>
+                <input class="input" type="text" name="title" id="title" placeholder="title">
+            </div>
+            <div class="input-conteiner">
+                <label class="label" for="body">Enter body</label>
+                <textarea class="input" type="textarea" name="body" id="body" placeholder="body"></textarea>
+            </div>   
+                    
+            <div class="input-conteiner">
+                <label class="label" for="userId">Choose an user-Id:</label>
+                <select name="userId" id="userId"  class="input">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select> 
+            </div>    
+            <input class="submit" type="submit" value="Submit">             
+        </form>
+
+        <div class="cards grid"></div>
+    </main>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
