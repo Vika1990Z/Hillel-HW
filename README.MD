@@ -1,43 +1,20 @@
-# ДЗ 37. Add users. Use JSONPlaceholder API.
+# ДЗ 38. httpGet. use XMLHttpRequest with promise
 
-## Верстка
+Створити функцію httpGet.  
+Всередині функції потрібно використовувати XMLHttpRequest для надсилання та
+отримання даних.  
+Реалізувати логіку з допомогою промісів.
 
-Створити форму. Поля у формі:
+* також додати можливість передавати у функцію method, body - щоб була можливість використовувати не лише GET, а також інші методи POST, PUT, DELETE.
 
-* input для title, textarea для body.  
-* select всередині якого потрібно відобразити userId від 1 до 10.  
-* input для submit форми.  
-
-Список карток доданих користувачів спочатку відобразити що поки немає жодного
-користувача.
-Як додасться хоча б один - відмалювати картку з даними.
-
-## Логіка
-
-Після того як користувач введе всі дані та натисне submit відмалювати картку користувача на сторінці - дані взяти з відповіді.
-
-**Важливо**
-
-Якщо хоча б одне поле порожнє і натиснуто submit, підсвітити поле де помилка.  
-Візуально повинні бути стилі, щоб виглядало нормально.  
-Після того як користувач доданий - відобразити якесь повідомлення про це та відобразити на сторінці
-
-**Приклад запиту**
+Приклад як слід викликати функцію з GET.
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  body: JSON.stringify({
-    title: 'foo',
-    body: 'bar',
-    userId: 1,
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-  .then((response) => response.json())
-  .then((json) => console.log(json));
+httpGet("https://jsonplaceholder.typicode.com/posts")
+  .then(function (response) {
+    console.log(`Resolve: ${response}`)
+  })
+  .catch(function (error) {
+    console.log(`Reject: ${error}`)
+  });
 ```  
-
-
