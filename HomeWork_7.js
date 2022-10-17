@@ -24,11 +24,7 @@
 // спробувати вирішити без використання циклу
 
 function toUpper (str) {
-    let resStr = "";
-    let arr = str.split(' ');
-    arr.forEach(word => resStr += word.charAt(0).toUpperCase() + word.slice(1) + ' ')
-    return resStr;
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1) + ' ').join(' ')
 }
-
 
 console.log(toUpper('ksldjferg slkjfd skdjhbf jkrgb'));
