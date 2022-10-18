@@ -1,21 +1,21 @@
-# ДЗ 41. Function myObjectAssign. Spread syntax.
+# ДЗ 42. Function delay. Promise.
 
-Реалізувати ф-цію myObjectAssign.
+Реалізувати ф-цію delay.
 
-По логікі, ця ф-ція має мержити всі обьекти в новий. 
-По суті повинна працювати як Object.assign().
+По логікі, потрібно викликати колбек через затримку яку ми прокинули, 
+Якщо затримка більше нуля, то маємо потрапити в resolve. 
+Якщо затримка 0, то потрппляємо в reject.
 
-Необхідно використати spread syntax.
-
+Потрібно використати promise.
 
 Приклад коду:
 
 ```js
-const myObjectAssign = () => {
+const delay = () => {
   console.log('Write your logic here!');
 }
 
-console.log(myObjectAssign({ a: 1 })); // { a: 1 }
-console.log(myObjectAssign({ a: 1 }, { b: 2 })); // { a: 1, b: 2 }
-console.log(myObjectAssign({ a: 1, b: 2 }, { b: 3 }, { a: 4, c: 5 })); // { a: 4, b: 3, c: 5 }
+delay(3000)
+  .then(() => console.log('Fire after 3 sec'))
+  .catch(() => console.log('Error!'));
 ```

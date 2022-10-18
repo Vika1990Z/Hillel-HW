@@ -1,5 +1,12 @@
-const myObjectAssign = (...objects) => objects.reduce((acc, curObject) => ({ ...acc, ...curObject }));
+const delay = timeDelay => new Promise ((resolve, reject) => {
+    if (timeDelay === 0) reject();
+    setTimeout(() => resolve(timeDelay), timeDelay);
+})
 
-console.log(myObjectAssign({ a: 1 })); // { a: 1 }
-console.log(myObjectAssign({ a: 1 }, { b: 2 })); // { a: 1, b: 2 }
-console.log(myObjectAssign({ a: 1, b: 2 }, { b: 3 }, { a: 4, c: 5 })); // { a: 4, b: 3, c: 5 }
+delay(0)
+    .then((timeDelay) => console.log(`Fire after ${timeDelay} m/sec`))
+    .catch(() => console.log('Error!'));
+
+delay(10)
+    .then((timeDelay) => console.log(`Fire after ${timeDelay} m/sec`))
+    .catch(() => console.log('Error!'));
