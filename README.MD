@@ -1,41 +1,21 @@
-# ДЗ 40. Function renderUser. Destructuring assignment.
+# ДЗ 41. Function myObjectAssign. Spread syntax.
 
-Реалізувати ф-цію renderUser.
+Реалізувати ф-цію myObjectAssign.
 
-По логікі, необхідно відмалювати в DOM всі данні з userData.
+По логікі, ця ф-ція має мержити всі обьекти в новий. 
+По суті повинна працювати як Object.assign().
 
-Необхідно використати destructuring assignment для доступу до кожного зі значень.
+Необхідно використати spread syntax.
+
 
 Приклад коду:
 
 ```js
-const userData = {
-  "id": 1,
-  "name": "Leanne Graham",
-  "username": "Bret",
-  "email": "Sincere@april.biz",
-  "address": {
-    "street": "Kulas Light",
-    "suite": "Apt. 556",
-    "city": "Gwenborough",
-    "zipcode": "92998-3874",
-    "geo": {
-      "lat": "-37.3159",
-      "lng": "81.1496"
-    }
-  },
-  "phone": "1-770-736-8031 x56442",
-  "website": "hildegard.org",
-  "company": {
-    "name": "Romaguera-Crona",
-    "catchPhrase": "Multi-layered client-server neural-net",
-    "bs": "harness real-time e-markets"
-  }
-};
-
-const renderUser = () => {
-  console.log('Write your logic here!')
+const myObjectAssign = () => {
+  console.log('Write your logic here!');
 }
 
-renderUser(userData);
+console.log(myObjectAssign({ a: 1 })); // { a: 1 }
+console.log(myObjectAssign({ a: 1 }, { b: 2 })); // { a: 1, b: 2 }
+console.log(myObjectAssign({ a: 1, b: 2 }, { b: 3 }, { a: 4, c: 5 })); // { a: 4, b: 3, c: 5 }
 ```
