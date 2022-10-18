@@ -21,8 +21,92 @@ header {
 }
 
 
-@media screen and (max-width: 607px) {
-    header {
-        font-size: 12px;
+.cards {
+    margin: 60px auto;
+    max-width: 100%;
+}
+
+.card {
+    position: relative;
+    width: 600px;
+    background: linear-gradient(to right, rgb(234, 232, 232), rgb(167, 166, 166));
+    padding: 10px 20px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
+    z-index: 0;
+    margin: 20px auto;
+}
+
+.card:hover {
+    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.5), 0 17px 50px 0 rgba(0,0,0,0.5);
+    outline: thick ridge #4e5c8eaa;
+    background: linear-gradient(to right,  rgba(234, 232, 232, 0.843), rgba(78, 122, 142, 0.695));
+}
+
+
+h3 {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.431);
+    color: #4e5c8e;
+}
+
+
+span {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.339);
+    color: rgba(78, 122, 142, 1);
+    font-weight: 600;
+}
+
+p { 
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    color: #646363;
+    font-weight: 500;
+    width: 100%;
+    padding: 5px 10px;
+    line-height: 80%;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+background-text{
+    text-shadow: 3px 3px 3px rgba(249, 247, 247, 0.1);
+    position: absolute;
+    width: 100%;
+    right: 0px;
+    padding-top: 10px;
+    font-size: 400px;
+    text-align: end;
+    font-weight: 900;
+    color:#121e491e;
+    z-index: 0;
+    line-height: 100%;
+}
+
+@media screen and (max-width: 650px) {
+    .card {
+        width: 500px;
+    }
+    p {
+        font-size: 15px;
     }
 }
+
+@media screen and (max-width: 550px) {
+    header {
+        font-size: 15px;
+    }
+    .card {
+        width: 300px;
+    }
+    p {
+        font-size: 13px;
+        line-height: normal;
+    }
+
+    background-text{
+        padding-top: 50px;
+    }
+}
+
