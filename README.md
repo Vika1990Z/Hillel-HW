@@ -8,8 +8,8 @@ The names of the branches correspond to the number of the homework.
 | ----------|----------------|-------------|
 | ДЗ 1. Exchange of var values | [home-work-1](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-1) | Пользователь вводит два значения. Одно присваивается одной переменной, а второе - другой. Необходимо поменять значения переменных так, чтобы значение первой оказалось во второй, а второй - в первой. | 
 | ДЗ 2. Combine outputs | [home-work-2](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-2) | При загрузке страницы задается два вопроса - Как тебя зовут? Какого ты года рождения? Выводится сообщение с именем и годом. |
-| ДЗ 3. Max Number | [home-work-3](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-3) | Вводятся три целых числа. Определить какое из них наибольшее. |
-| ДЗ 4. Average number | [home-work-4](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-4) | Вводятся три разных числа. Найти, какое из них является средним (больше одного, но меньше другого). |
+| ДЗ 3. Max Number | [home-work-3](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-3) | Вводятся три целых числа. Определить какое из них наибольшее. / Найти макс среди любого колва значений |
+| ДЗ 4. Average number | [home-work-4](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-4) | Вводятся три разных числа. Найти, какое из них является средним / Найти приближенное к среднему арифметическому среди любого кол-ва чисел|
 | ДЗ 5. Subsequence | [home-work-5](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-5) | Вывести на страницу последовательность - в одну строку  через запятую числа от 10 до 20 и наоборот. |
 | ДЗ 6. Multiplication table | [home-work-6](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-6) | Вывести таблицу умножения на 7. |
 | ДЗ 7. ToUpperCase | [home-work-7](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-7) | Поменять в строке первые символы слов на верхний регистр 'a'.toUpperCase(). |
@@ -21,9 +21,9 @@ The names of the branches correspond to the number of the homework.
 | ДЗ 13. Limit string's length | [home-work-13](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-13) | Напишите функцию ограничения длины строки limitStr(str, n, symb), которая обрезает строку, если она длиннее указанного количества символов n. |
 | ДЗ 14. Check char isUpperCase | [home-work-14](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-14) | Напишите функцию isUpperCase(str, character), которая определяет в каком регистре написан символ строки в указанной позиции. |
 | ДЗ 15. Compact. | [home-work-15](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-15) | Напишите функцию, которая очищает массив от нежелательных значений, таких как false, undefined, пустые строки, ноль, null. |
-| ДЗ 16. Unique. | [home-work-16](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-16) | Напишите функцию, которая убирает повторяющиеся значения. |
+| ДЗ 16. Unique. | [home-work-16](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-16) | Напишите функцию, которая убирает повторяющиеся значения. / Используя обьект типа Set()|
 | ДЗ 17. IsEqual. | [home-work-17](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-17) | Напишите функцию, которая сравнивает два массива и возвращает true, если они идентичны. |
-| ДЗ 18. Palindrome | [home-work-18](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-18) | Напишите функцию, которая проверяет, является ли исходная строка палиндромом - читается в обе стороны одинаково |
+| ДЗ 18. Palindrome | [home-work-18](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-18) | Напишите функцию, которая проверяет, является ли исходная строка палиндромом - читается в обе стороны одинаково / Используя цикл for с несколькими условиями |
 | ДЗ 19. isPlainObject. | [home-work-19](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-19) | Напишите функцию, которая проверяет, является ли элемент именно простым объектом, а не массивом, null и т.п. |
 | ДЗ 20. Without. | [home-work-20](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-20) | Напишите функцию, которая возвращает новый объект без указанных значений. |
 | ДЗ 21. IsEmpty. | [home-work-21](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-21) | Напишите функцию, которая делает поверхностную проверку объекта на пустоту. |
@@ -44,7 +44,10 @@ The names of the branches correspond to the number of the homework.
 | ДЗ 36. Animate cube | [home-work-36](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-36) | Добавить квадрат на страницу. На клике, он должен начать двигаться слева направо - использовать setInterval. |
 | ДЗ 37. Add users. Use JSONPlaceholder API. | [home-work-37](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-37) | Создать карточки с пользователями используя fetch |
 | ДЗ 38. httpGet. use XMLHttpRequest with promise | [home-work-38](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-38) | Создать карточки с постами пользователей используя XMLHttpRequest и промисы |
-
+| ДЗ 39. Function sumAllNumbers. Rest parameters| [home-work-39](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-39) | Написать функцию, которая суммирует все значения, используя rest parameters |
+| ДЗ 40. Function renderUser. Destructuring assignment | [home-work-40](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-40) | Написать функцию, которая отрисует в DOM все даннык с userDataя, используя destructuring assignment |
+| ДЗ 41. Function myObjectAssign. Spread syntax | [home-work-41](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-41) | Написать функцию, которая будет мерджить все обьекты в один, должно работать по аналогии с Object.assign(), использовать spread syntax |
+| ДЗ 42. Function delay. Promise | [home-work-42](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-42) | Написать функцию, которая вызывать колбек через задержку, которую мы прокинем, использовать promise (если задержка 0 то reject) |
 
 
 
