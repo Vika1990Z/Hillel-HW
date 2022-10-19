@@ -24,8 +24,19 @@
 //___________________updated task________________________
 // переписати невикористовуючи методи Number() isNaN() та перевірку на пробіл
 
-function filterNumbers(str) {
-    return str.replace(/\D/g,'');
+const filterNumbers = str => str.replace(/\D/g,'');
+console.log(filterNumbers('jsahdfg2498576 )))rhg'));
+
+
+// or  переписати не використовуючи регулярку
+const filterNumbers3 = str => {
+    let result = "";
+    for (let i = 0; i<str.length; i++) {
+        if (Number.isFinite(+str[i]) && str[i] != " ") result += str[i];
+    }
+    return result;
 }
 
-console.log(filterNumbers('jsahdfg2498576 )))rhg'));
+console.log(filterNumbers3('ajfb w423))0,432/0'));
+
+
