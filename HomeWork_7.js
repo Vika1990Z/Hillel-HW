@@ -23,8 +23,11 @@
 //___________________updated task________________________
 // спробувати вирішити без використання циклу
 
-function toUpper (str) {
-    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1) + ' ').join(' ')
-}
+const toUpper = str => str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
 
-console.log(toUpper('ksldjferg slkjfd skdjhbf jkrgb'));
+console.log(toUpper('ksldjferg slkjfd s kjgr kdjhbf jkrgb'));
+
+// or with reduce
+const toUpper2 = str => str.replace(str.charAt(0), str.split('').reduce((acc) => acc.toUpperCase()));
+
+console.log(toUpper2('ksldjferg slkjfd s kjgr kdjhbf jkrgb'));
