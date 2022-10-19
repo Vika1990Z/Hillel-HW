@@ -30,7 +30,7 @@
 // переписати використовуючи обʼект типу Set()
 
 const unique = arr => {
-   mySet = new Set;
+   mySet = new Set();
    arr.forEach(element => mySet.add(element));
    return Array.from(mySet);
 }
