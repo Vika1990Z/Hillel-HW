@@ -19,7 +19,7 @@
 // зробити використовуючи лише один цикл
 
 let str = "";
-for (let i=10; i<=20; i++) {
+for (let i = 10; i<=20; i++) {
     (i<20) ? str += i+"," : str += i;
 }
 console.log(`${str},${str.split(",").reverse().join(",")}`);
@@ -27,7 +27,7 @@ console.log(`${str},${str.split(",").reverse().join(",")}`);
 
 // спробувати переписати використовуючи тільки цикл for з декількома умовами
 let str2 = "";
-for (let i = 10, j = 20; i<=20 && j>=10; i++, j--) {
+for (let i = 10, j = 20; i<=20, j>=10; i++, j--) {
     str2 += i+",";
     (j>10) ? str2 += j+"," : str2 += j;
 }
