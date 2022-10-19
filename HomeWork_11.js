@@ -31,7 +31,7 @@ removeChar('qjwef b4385 **');
 
 // or
 const removeChar2 = str => {
-    return Array.from(str).reduce((acc, curr) => {
+    return str.split('').reduce((acc, curr) => {
         if (curr.toLowerCase() != curr.toUpperCase() || !Number.isNaN(+curr) && curr != ' ') acc += curr;
         return acc;
     }, "");
