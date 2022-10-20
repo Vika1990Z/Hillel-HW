@@ -23,11 +23,13 @@
 //___________________updated task________________________
 // спробувати вирішити без використання циклу
 
-const toUpper = str => str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-
+const toUpper = str => str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 console.log(toUpper('ksldjferg slkjfd s kjgr kdjhbf jkrgb'));
 
-// or with reduce
-const toUpper2 = str => str.replace(str.charAt(0), str.split('').reduce((acc) => acc.toUpperCase()));
-
+// or with reduce and remove last white space with trim()
+const toUpper2 = str => str.split(' ').reduce((acc, curr) => acc += `${curr[0].toUpperCase()}${curr.slice(1)} `, '').trimEnd();
 console.log(toUpper2('ksldjferg slkjfd s kjgr kdjhbf jkrgb'));
+
+// or remove last white space with slice
+const toUpper3 = str => str.split(' ').reduce((acc, curr) => acc += `${curr[0].toUpperCase()}${curr.slice(1)} `, '').slice(0,-1);
+console.log(toUpper3('ksldjferg slkjfd s kjgr kdjhbf jkrgb'));
