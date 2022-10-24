@@ -25,18 +25,24 @@
 // переписати невикористовуючи методи Number() isNaN() та перевірку на пробіл
 
 const filterNumbers = str => str.replace(/\D/g,'');
-console.log(filterNumbers('jsahdfg2498576 )))rhg'));
+console.log(filterNumbers('0ajfb  00 w. 42. 3))0,432/0'));
 
 
 // or  переписати не використовуючи регулярку
 const filterNumbers3 = str => {
     let result = "";
     for (let i = 0; i<str.length; i++) {
-        if (Number.isFinite(+str[i]) && str[i] != " ") result += str[i];
+        if (!Object.is(Number.parseFloat(str[i]), NaN)) result += str[i];
     }
     return result;
 }
+console.log(filterNumbers3('0ajfb  00 w. 42. 3))0,432/0'));
 
-console.log(filterNumbers3('ajfb w423))0,432/0'));
+
+// or functional approach :)
+const filterNumbers4 = str => str.split('').filter(curr => !Object.is(Number.parseFloat(curr), NaN)).join('');
+console.log(filterNumbers4('0ajfb  00 w. 42. 3))0,432/0'));
+
+
 
 
