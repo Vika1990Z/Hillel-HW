@@ -21,3 +21,16 @@ const makePairs = obj => Object.entries(obj);
 
 const data = { a: 1, b: 2 };
 console.log(makePairs(data));
+
+
+// for in
+const makePairs2 = obj => {
+    let result = [];
+    for (key in obj) {
+        result.push([key, obj[key]]);
+    }
+    return result;
+};
+
+const data2 = { a: 1, b: 2 };
+console.log(makePairs2(data));
