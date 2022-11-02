@@ -1,0 +1,29 @@
+@import '../shared/variables.scss';
+
+main {
+    margin: 0 auto;
+}
+
+.container-main {
+    margin: 0 auto;
+    padding: 0 50px;
+    text-align: center;
+}
+
+section {
+    display: block;
+    background-color: $primary_4;
+    padding: $base-padding * 1.5;
+    margin-top: $base-margin * 0;
+    margin-bottom: $base-margin * 5;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: $base-border-radius;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
