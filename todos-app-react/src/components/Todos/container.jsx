@@ -48,8 +48,10 @@ class Todos extends React.Component {
     const { todos } = this.state;
     const updated = todos.map(todo => {
         if(todo.id === +checboxId) {
-            todo.checked = todo.checked !== true;
-            // document.getElementById(`${todo.id}`).classList.toggle('checkClass');
+            return {
+              ...todo,
+              checked: !todo.checked,
+            }
         }
         return todo
       })
