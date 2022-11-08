@@ -1,0 +1,23 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  
+    .check {
+      margin-right: 5px;
+    }
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+.checkClass {
+  background-color: rgb(253, 61, 61);
+
+  div {
+    text-decoration: line-through;
+  }
+}
+
