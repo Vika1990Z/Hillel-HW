@@ -6,7 +6,7 @@ const Item = ({ id, value, checked, onRemoveTodo, onCheckTodo }) => {
   return (
   <li 
     id = {id}
-    className = {checked ? 'item checkClass' : 'item' }  
+    className = {checked ? 'item checkClass' : 'item' } 
     >
     <div className="value">
       <input
