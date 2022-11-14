@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import Button from './Button'
 
 import './styles.scss'
 
@@ -7,15 +8,15 @@ const Square = ({id}) => {
     
     return (
         <div id={id} className="card d-flex">
-            <button onClick={() => setNumber(number + 1)}>
+            <Button onClick = {() => setNumber(number + 1)}>
                 +
-            </button>
+            </Button>
 
             <p>{number}</p>
-
-            <button onClick={() => setNumber(number - 1)}>
+            
+            <Button onClick = {() => setNumber(number - 1)}>
                 -
-            </button>
+            </Button>
         </div>
     )
 }
