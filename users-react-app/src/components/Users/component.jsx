@@ -1,5 +1,5 @@
 
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Error from "./Error";
 import User from './User';
@@ -10,7 +10,7 @@ import useGetData from '../../hooks/useGetData';
 const Users = () => {
     const {data, error} = useGetData('https://jsonplaceholder.typicode.com/users')
 
-    if(error != null) {
+    if(error || Object.keys(data).length === 0) {
         return (
           <Error />
         )
@@ -31,6 +31,7 @@ const Users = () => {
                     <User key={user.id} {...user}/>
                 </Link>
                 )) }
+                
             </section>
         </div>
     </main>
