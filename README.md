@@ -48,6 +48,18 @@ The names of the branches correspond to the number of the homework.
 | ДЗ 40. Function renderUser. Destructuring assignment | [home-work-40](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-40) | Написать функцию, которая отрисует в DOM все даннык с userDataя, используя destructuring assignment |
 | ДЗ 41. Function myObjectAssign. Spread syntax | [home-work-41](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-41) | Написать функцию, которая будет мерджить все обьекты в один, должно работать по аналогии с Object.assign(), использовать spread syntax |
 | ДЗ 42. Function delay. Promise | [home-work-42](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-42) | Написать функцию, которая вызывать колбек через задержку, которую мы прокинем, использовать promise (если задержка 0 то reject) |
+| ДЗ 43. Movies app. Part 1. | [home-work-43](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-43) | Зарегистрироваться на themoviedb. Развернуть локально проект movies-app. Отобразить на результаты трех запросов: Get Popular, Get Top Rated, Get Upcoming |
+| ДЗ 44. Movies app. Part 2. | [home-work-44](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-44) | Добавить функционал поиска фильмов |
+| ДЗ 45. Render users using React | [home-work-45](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-45) | Переписать ДЗ 26, используя React|
+| ДЗ 46. Todos app | [home-work-46](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-46) | Продолжить классную работу, добавть функционал выполненного задания, используя React|
+| ДЗ 47. Squares increment / decrement using React | [home-work-47](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-47) | Перписать ДЗ 27, используя React|
+| ДЗ 48. Users app | [home-work-48](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-48) | Создать приложение, в котором будут отображаться пользователи и информация по ним. Реализовать навигацию по страничкам через ReactRouter. |
+| ДЗ 49. Users app. Create posts. | [home-work-49](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-49) | Создать проект на основе ДЗ 48. где нужно добавть страницу с возможностью создания постов пользователей, используя форму |
+
+
+
+
+
 
 
 
