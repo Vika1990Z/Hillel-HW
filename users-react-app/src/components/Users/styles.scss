@@ -1,0 +1,42 @@
+@import '../shared/variables.scss';
+
+main {
+    margin: 0 auto;
+}
+
+.container-main {
+    margin: 20px  auto;
+    padding: 30px 50px;
+    text-align: center;
+    background-color: $primary_4;
+}
+.users {
+    max-width: 1500px;
+    margin: 0px  auto;
+}
+
+h2 {
+ 
+    text-shadow: $header-text-shadow;
+    text-align: center;
+    color: $primary_0;
+    font-size: $font-size-xxl;
+  }
+
+section {
+    display: block;
+    padding: $base-padding * 1.5;
+    margin-top: $base-margin * 0;
+    margin-bottom: $base-margin * 5;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: $base-border-radius;
+}
+
+.d-flex {
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
