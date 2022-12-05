@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { selectTodos } from "../../../store/todos/selectors";
 
 import Item from "./Item";
 
@@ -18,4 +20,8 @@ const List = ({ todos }) => (
   </ul>
 )
 
-export default List;
+const mapStateToProps = state => ({
+  todos: selectTodos(state),
+})
+
+export default connect(mapStateToProps, null)(List);

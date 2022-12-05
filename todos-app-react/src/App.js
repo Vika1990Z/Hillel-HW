@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import Todos from './components/Todos/container';
+import Todos from './components/Todos/';
 
 
 import {Provider} from "react-redux"; 
@@ -11,7 +11,6 @@ function App() {
       <div className="App">
         <Header text='My Todo List' />
         <Todos />
-
       </div>
     </Provider>
   );

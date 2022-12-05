@@ -24,7 +24,7 @@ const Item = ({ id, value, checked, removeTodo, checkTodo }) => {
     </button>
   </li>
 )
-      }
+}
 
 const mapDispatchToProps = {
   removeTodo,
