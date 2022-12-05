@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { addTodo } from '../../store/todos/actions';
-import { enterTodo } from '../../store/todo/actions';
 import { selectTodos } from '../../store/todos/selectors';
 
 import EmptyList from "./EmptyList";
