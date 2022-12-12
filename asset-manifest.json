@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.c8947770.css",
-    "main.js": "/static/js/main.d3e32736.js",
-    "static/media/bg.img": "/static/media/bg.e8d5041e6bfdf76f5ba1.img",
-    "index.html": "/index.html",
-    "main.c8947770.css.map": "/static/css/main.c8947770.css.map",
-    "main.d3e32736.js.map": "/static/js/main.d3e32736.js.map"
+    "main.css": "/Hillel-HW/static/css/main.7e25dde2.css",
+    "main.js": "/Hillel-HW/static/js/main.d3e32736.js",
+    "static/media/bg.img": "/Hillel-HW/static/media/bg.e8d5041e6bfdf76f5ba1.img",
+    "index.html": "/Hillel-HW/index.html",
+    "main.7e25dde2.css.map": "/Hillel-HW/static/css/main.7e25dde2.css.map",
+    "main.d3e32736.js.map": "/Hillel-HW/static/js/main.d3e32736.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8947770.css",
+    "static/css/main.7e25dde2.css",
     "static/js/main.d3e32736.js"
   ]
 }
