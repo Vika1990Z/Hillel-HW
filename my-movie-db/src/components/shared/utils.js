@@ -4,7 +4,7 @@ export const generateMoviesURL = section => `${ REACT_APP_API }movie/${ section 
 
 export const generateMovieURL = movieId => `${ REACT_APP_API }movie/${ movieId }?api_key=${ REACT_APP_API_KEY }`;
 
-export const generateSearchMovieURL = query => `${ REACT_APP_API }search/movie/?api_key=${ REACT_APP_API_KEY }&query=${ query }`;
+export const generateSearchMovieURL = query => `${ REACT_APP_API }search/movie?api_key=${ REACT_APP_API_KEY }&query=${ query }`;
 
 export const generateImgTag = (path, width) => `${ REACT_APP_IMG_API }/w${width}${path}`;
 
