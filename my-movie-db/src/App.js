@@ -4,7 +4,6 @@ import store from './store/configureStore';
 import Header from "./components/Header";
 import Footer from './components/Footer'
 
-
 function App() {
   return (
     <Provider store={store}>

@@ -1,29 +1,30 @@
 import '../shared/styles.scss'
 
-import { useEffect } from "react";
 import {connect} from "react-redux";
 
-import { setMovies } from '../../store/movies/actions'
+import useFetch from '../../hooks/useFetch';
+import { setPopularMovies } from '../../store/myMovies/actions'
 
 import { generateMoviesURL } from '../shared/utils';
 import Movie from '../Movie';
+import Error from '../Error/';
 
-const Movies = ({movies, setMovies}) => {
-    useEffect(() => {
-        fetch(generateMoviesURL('popular'))
-        .then (res => res.json())
-        .then (data => {
-            setMovies(data.results)})
-    },[]);
+const Movies = ({poopularMovies, setPopularMovies}) => {
+    let url = generateMoviesURL('popular');
+    useFetch(url, setPopularMovies)
  
+    if (poopularMovies.length === 0) {
+        return  <Error />
+    }
+
     return (
     <main>
          <section>
             <h2 className="section-title">Today is Popular...</h2>
             <div className="popular d-flex movies">
-            { movies.map(movie => {
+            { poopularMovies.map(movie => {
                     return (
-                    <Movie key={movie.id} {...movie}/>
+                        <Movie key={movie.id} {...movie}/>
                 )}) }
       </div>
         </section>
@@ -32,11 +33,11 @@ const Movies = ({movies, setMovies}) => {
 
 
 const mapStateToProps = state => ({
-    movies: state.movies
+    poopularMovies: state.myMovies.popular
 })
 
 const mapDispatchToProps = {
-    setMovies,
+    setPopularMovies,
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Movies);
 

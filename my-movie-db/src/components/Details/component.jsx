@@ -2,24 +2,25 @@ import '../shared/styles.scss'
 
 import { connect } from 'react-redux';
 import { useParams, Link} from 'react-router-dom';
-import { useEffect } from "react";
+
+import useFetch from '../../hooks/useFetch';
 
 import { convertDate, generateImgTag, generateMovieURL } from '../shared/utils';
 
-import { setMovie } from '../../store/movie/actions';
+import { setMovie } from '../../store/myMovies/actions';
+import Error from '../Error/';
 
 const Details = ({movie, setMovie}) => {
     let params = useParams();
-    useEffect(() => {
-        fetch(generateMovieURL(params.movieId))
-        .then (res => res.json())
-        .then (data => {
-            console.log(data)   
-            setMovie(data)
-        })
-    },[]);
-    return (
+    let url = generateMovieURL(params.movieId);
+    useFetch(url, setMovie);
 
+    if (Object.keys(movie).length === 0) {
+        console.log(Object.keys(movie).length)
+        return  <Error />
+    }
+
+    return (
     <section className="movie">
         <div className='grid'>
         <img src={generateImgTag(movie.poster_path, '500')} alt={`${movie.original_title}`} />
@@ -39,7 +40,7 @@ const Details = ({movie, setMovie}) => {
 )
 }
 const mapStateToProps = state => ({
-  movie: state.movie
+  movie: state.myMovies.movie
 })
 
 const mapDispatchToProps = {

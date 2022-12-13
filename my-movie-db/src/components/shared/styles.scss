@@ -5,9 +5,22 @@ body {
   color: white;
 } 
 
-.movies {
-  margin: 0px  40px;
+.d-flex {
+  padding: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
+
+.grid {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $base-margin * 2;
+  justify-items: center;
+}
+
 
 header {
   background: $primary_6 url('../shared/bg.img');
@@ -30,6 +43,22 @@ h1 {
   margin: $base-margin;
 }
 
+
+footer {
+  max-width: 100%;
+  padding: $base-padding * 3;
+  margin-top: $base-margin * 1.5;
+  box-shadow: $base-box-shadow;
+  text-shadow: $search-text-shadow;
+  text-align: center;
+  color: $primary_6;
+  letter-spacing: $base-font-size * 0.3;
+  word-spacing: $base-font-size;
+}
+
+.movies {
+  margin: 0px  40px;
+}
 section {
   display: block;
   padding: $base-padding * 1.5;
@@ -40,9 +69,8 @@ section {
   border-radius: $base-border-radius;
 }
 
-
-
 .section-title {
+  margin-top: $base-margin * 4;
   text-shadow: $search-text-shadow;
   font-weight: 900;
   text-align: center;
@@ -53,13 +81,6 @@ section {
   letter-spacing: $base-font-size * 0.6;
 }
 
-.d-flex {
-  padding: 5px 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
 
 .card {
   margin: $base-margin;
@@ -102,14 +123,6 @@ section {
 
 }
 
-.grid {
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: $base-margin * 2;
-  justify-items: center;
-}
-
 .movie-title {
   text-align: center;
   text-shadow: $section-text-shadow;
@@ -131,8 +144,7 @@ section {
     font-weight: 700;
     margin-left: $base-margin;
     text-indent: 20px;
-}
-
+  }
 }
 
 img {
@@ -170,20 +182,6 @@ h3 {
   }
 }
 
-
-footer {
-  max-width: 100%;
-  padding: $base-padding * 3;
-  margin-top: $base-margin * 1.5;
-  box-shadow: $base-box-shadow;
-  text-shadow: $search-text-shadow;
-  text-align: center;
-  color: $primary_6;
-  letter-spacing: $base-font-size * 0.3;
-  word-spacing: $base-font-size;
-}
-
-
 input {
   background-color: $search;
   padding: $base-padding * 1.5;
@@ -206,7 +204,6 @@ input:hover{
   background-color: $search_hovered;
   color: $primary_0;
 }
-
 
 button {
   cursor: pointer;
@@ -233,13 +230,10 @@ button:hover {
   min-width: 120px;
 }
 
-
 .form {
-  padding: 25px 0;
+  padding: 35px 0;
   background: $primary_6;
-  margin-bottom: $base-margin * 4;
   box-shadow: $header-box-shadow;
-  // margin: 0 30px;
   justify-content: space-around;
 
   input, textarea, select { 
@@ -299,4 +293,11 @@ button:hover {
     text-align: center;
     margin: 30px auto;
   }
+}
+
+.search {
+  width: 200px;
+  position: absolute;
+  top: 8rem;
+  right: 1rem;
 }

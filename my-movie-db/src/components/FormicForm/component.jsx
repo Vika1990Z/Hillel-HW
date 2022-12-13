@@ -4,10 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 
-import {connect} from "react-redux";
-import { setSearchedMovies } from '../../store/searched/actions'
-import { generateSearchMovieURL } from '../shared/utils';
-
 const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
@@ -29,17 +25,13 @@ const MyValidationSchema = Yup.object({
 })
 
 
-const FormicForm = ({setSearchedMovies}) => {
+const FormicForm = () => {
   const initialValues = {search: "" };
   const navigate = useNavigate();
 
   const handleSubmition = (values, { resetForm }) => {
-      fetch(generateSearchMovieURL(values.search))
-      .then (res => res.json())
-      .then (data => {
-        setSearchedMovies(data.results)})
-        navigate(`/search/${values.search}`);
-        resetForm();
+    navigate(`/search/${values.search}`);
+    resetForm();
   }
 
   return (
@@ -66,9 +58,4 @@ const FormicForm = ({setSearchedMovies}) => {
   </div>
 )};
 
-
-const mapDispatchToProps = {
-  setSearchedMovies,
-}
-
-export default connect(null, mapDispatchToProps)(FormicForm);
+export default FormicForm;
