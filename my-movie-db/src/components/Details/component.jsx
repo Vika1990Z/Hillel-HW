@@ -16,7 +16,6 @@ const Details = ({movie, setMovie}) => {
     useFetch(url, setMovie);
 
     if (Object.keys(movie).length === 0) {
-        console.log(Object.keys(movie).length)
         return  <Error />
     }
 
