@@ -55,6 +55,8 @@ The names of the branches correspond to the number of the homework.
 | ДЗ 47. Squares increment / decrement using React | [home-work-47](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-47) | Перписать ДЗ 27, используя React|
 | ДЗ 48. Users app | [home-work-48](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-48) | Создать приложение, в котором будут отображаться пользователи и информация по ним. Реализовать навигацию по страничкам через ReactRouter. |
 | ДЗ 49. Users app. Create posts. | [home-work-49](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-49) | Создать проект на основе ДЗ 48. где нужно добавть страницу с возможностью создания постов пользователей, используя форму |
+| ДЗ 50. ДЗ 50. Movies app using React | [home-work-50](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-50) | Создать проект поиска фильмов используя React, Redux, Formic |
+| ДЗ 51. Todos app using Redux | [home-work-51](https://github.com/Vika1990Z/Hillel-HW/tree/home-work-51) | Создать проект на основе ДЗ 46, где нужно переписать логику используя Redux |
 
 
 
