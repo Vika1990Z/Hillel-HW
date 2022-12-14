@@ -11,9 +11,7 @@ const useFetch = (url, setData) => {
                 console.log('Error', err)
               })
               .finally(() => console.log('data loaded'));
-
     },[])
-
 }
  
 export default useFetch;

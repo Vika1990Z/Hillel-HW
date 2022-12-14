@@ -24,7 +24,6 @@ const MyValidationSchema = Yup.object({
     .required('Required'),
 })
 
-
 const FormicForm = () => {
   const initialValues = {search: "" };
   const navigate = useNavigate();

@@ -3,10 +3,14 @@
 body {
   background-color: rgba(0, 0, 0, 0.938);
   color: white;
+  margin: 0;
+  position: relative;
+  padding-bottom: $base-padding*10;
 } 
 
 .d-flex {
-  padding: 5px 0;
+  margin: 0 auto;
+  padding: $base-padding 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -14,7 +18,7 @@ body {
 }
 
 .grid {
-  max-width: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: $base-margin * 2;
@@ -24,14 +28,10 @@ body {
 
 header {
   background: $primary_6 url('../shared/bg.img');
-  max-width: 100%;
   padding: $base-padding * 2;
-  // background: $primary_6;
-  // margin-bottom: $base-margin * 2;
   box-shadow: $header-box-shadow;
   position: relative;
   height: 80px;
-
 }
 
 h1 {
@@ -45,10 +45,13 @@ h1 {
 
 
 footer {
-  max-width: 100%;
-  padding: $base-padding * 3;
-  margin-top: $base-margin * 1.5;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: $base-padding * 3 0;
   box-shadow: $base-box-shadow;
+  background-color: $primary_6;
   text-shadow: $search-text-shadow;
   text-align: center;
   color: $primary_6;
@@ -59,11 +62,11 @@ footer {
 .movies {
   margin: 0px  40px;
 }
+
 section {
   display: block;
   padding: $base-padding * 1.5;
   margin-top: $base-margin * 0;
-  margin-bottom: $base-margin * 5;
   margin-left: auto;
   margin-right: auto;
   border-radius: $base-border-radius;
@@ -74,7 +77,7 @@ section {
   text-shadow: $search-text-shadow;
   font-weight: 900;
   text-align: center;
-  padding-left: 50px;
+  padding-left: $base-padding*2;
   color: $primary_6;
   font-size: $font-size-xxl;
   word-spacing: $base-font-size * 1;
@@ -87,19 +90,19 @@ section {
   width: 220px;
   position: relative;
 
-
   img {
       display: block;
       margin: 0 auto;
       border-radius: $base-border-radius;
       box-shadow: $card-box-shadow;
-      border: $base-border-thickness*2 solid rgba(255, 255, 255, 0.184);
+      border: $base-border-thickness*2 solid $primary_7;
   }
 
   img:hover {
       box-shadow: $card-hovered-box-shadow;
-      border: $base-border-thickness*2 solid rgba(255, 255, 255, 0.184);
+      border: $base-border-thickness*2 solid $primary_7;
   }
+
   .movie_title {
       font-weight: 500;
       text-align: center;
@@ -108,6 +111,7 @@ section {
       text-shadow: $header-text-shadow;
       letter-spacing: 1px;
   }
+
   .bage {
       position: absolute;
       top: -10px;
@@ -116,11 +120,10 @@ section {
       border-radius: 50%;
       padding: $base-padding;
       box-shadow: $bage-box-shadow;
-      border: $base-border-thickness*2 solid rgba(255, 255, 255, 0.184);
+      border: $base-border-thickness*2 solid $primary_7;
       font-size: $font-size-sm;
       font-weight: 600;
   }
-
 }
 
 .movie-title {
@@ -151,12 +154,11 @@ img {
   margin: $base-margin * 2;
   border-radius: $base-border-radius;
   box-shadow: $card-box-shadow;
-  border: $base-border-thickness*2 solid rgba(255, 255, 255, 0.184);
+  border: $base-border-thickness*2 solid $primary_7;
 }
 
 img:hover {
   box-shadow: $card-hovered-box-shadow;
-  border: $base-border-thickness*2 solid rgba(255, 255, 255, 0.184);
 }  
 
 p {
@@ -185,7 +187,7 @@ h3 {
 input {
   background-color: $search;
   padding: $base-padding * 1.5;
-  margin: $base-margin;
+  margin: $base-margin*2;
   text-align: center;
   width: 200px;
   position: absolute;
@@ -209,29 +211,29 @@ button {
   cursor: pointer;
   text-align: center;
   font-weight: bolder;
-  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.527);
-  border-radius: 20px;
-  padding: 10px 20px;
-  border: solid 2px #121e49;
+  text-shadow: 5px 5px 10px $primary_6;
+  border-radius: $base-border-radius*2;
+  padding: $base-padding $base-padding*2;
+  border: solid 2px $primary_3;
   background: linear-gradient(to right, $primary_0, $primary_6);
   color: white;
   box-shadow: $header-box-shadow;
-
 }
 
 button:hover {
   background: linear-gradient(to right, $primary_6, $primary_0);
-
 }
 
 .back_home {
   position: absolute;
   right: 3%;
+  bottom: -40px;
   min-width: 120px;
 }
 
 .form {
-  padding: 35px 0;
+  width: 100%;
+  padding: $base-padding*2 0;
   background: $primary_6;
   box-shadow: $header-box-shadow;
   justify-content: space-around;
@@ -242,29 +244,31 @@ button:hover {
     background-color: $primary_3;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: .1rem;
-    padding: 10px;
+    padding: $base-padding;
     width: 300px;
     border-radius: $base-border-radius;
   }
   
   button:disabled {
     background: linear-gradient(to left,$primary_6, $primary_6);
-    color: gray;
+    color: $primary_0;
   }
   .error {
     text-align: center;
-    font-size: 12px;
+    font-size: $font-size-sm;
     color: red;
-    margin-top: 0.25rem;
+    margin: $base-margin*0.2 0;
   }
   
   .error-field {
-    border: 2px solid red;
+    border: $base-border-thickness solid red;
   }
+
   button {
     display: block;
-    margin: 10px auto;
+    margin: $base-margin auto;
   }
+
   p {
     color: white;
     font-weight: 500;
@@ -275,18 +279,19 @@ button:hover {
     text-shadow: $search-text-shadow;
     font-size: $base-font-size*2;
     color: $primary_2;
-    border: solid white 1px;
-    padding: 5px;
+    border: solid $primary_7 $base-border-thickness*3;
+    padding: $base-padding*0.5;
     font-weight: 700;
   }
 }
+
 .movie {
-  margin-top: 80px;
+  margin-top: $base-margin*2;
 }
 
 .notFound {
   text-align: center;
-  padding: 21%;
+  padding-top: $base-padding*20;
 
   p {
     font-size: $base-font-size*1.2;
@@ -300,4 +305,51 @@ button:hover {
   position: absolute;
   top: 9rem;
   right: 1rem;
+}
+
+main{
+  min-height: 600px;
+  height: 100%;
+}
+
+@media screen and (max-width: 1350px) {
+  h1 {
+    font-size: $font-size-xxl * 1.5;
+  }
+}
+@media screen and (max-width: 950px) {
+ .grid{
+    img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+ }
+
+  .movie{
+    margin-top: $base-margin;
+    div {
+      display: block;
+    }
+  }
+
+  .movie-title {
+    margin-bottom: $base-margin * 2;
+  }
+  h3 {
+    margin-left: $base-margin*15;
+    margin-top: $base-margin;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .section-title {
+      font-size: $font-size-lg;
+  }
+  h3 {
+    margin-left: $base-margin*3;
+    margin-top: $base-margin;
+  }
+
 }

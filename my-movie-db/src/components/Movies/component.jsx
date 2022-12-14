@@ -31,7 +31,6 @@ const Movies = ({poopularMovies, setPopularMovies}) => {
     </main>
 )}
 
-
 const mapStateToProps = state => ({
     poopularMovies: state.myMovies.popular
 })

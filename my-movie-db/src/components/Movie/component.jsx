@@ -1,6 +1,7 @@
 import '../shared/styles.scss';
-import { Link } from "react-router-dom";
 import { generateImgTag } from '../shared/utils';
+import { Link } from "react-router-dom";
+
 
 const Movie = (movie) => (
     <div className='card'>
